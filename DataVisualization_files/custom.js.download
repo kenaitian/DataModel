@@ -1,3 +1,0 @@
-$('#appmode-leave').hide();                          // Hides the edit app button.
-$('#appmode-busy').hide();                           // Hides the kernel busy indicator.
-$('#appmode-loader').append('<h2>Loading...</h2>');  // Adds a loading message.

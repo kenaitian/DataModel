@@ -1,11 +1,19 @@
-/*!
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+
+
+<title>covid19-model</title>
+
+<style type="text/css">
+    /*!
 *
 * Twitter Bootstrap
 *
 */
 /*!
- * Bootstrap v3.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -55,9 +63,7 @@ a:hover {
   outline: 0;
 }
 abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
+  border-bottom: 1px dotted;
 }
 b,
 strong {
@@ -193,9 +199,9 @@ th {
   *,
   *:before,
   *:after {
-    text-shadow: none !important;
     background: transparent !important;
     box-shadow: none !important;
+    text-shadow: none !important;
   }
   a,
   a:visited {
@@ -259,17 +265,17 @@ th {
   }
 }
 @font-face {
-  font-family: "Glyphicons Halflings";
-  src: url("../components/bootstrap/fonts/glyphicons-halflings-regular.eot");
-  src: url("../components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../components/bootstrap/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../components/bootstrap/fonts/glyphicons-halflings-regular.woff") format("woff"), url("../components/bootstrap/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  font-family: 'Glyphicons Halflings';
+  src: url('../components/bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('../components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: "Glyphicons Halflings";
+  font-family: 'Glyphicons Halflings';
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1092,12 +1098,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #296eaa;
+  color: #337ab7;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #1a466c;
+  color: #23527c;
   text-decoration: underline;
 }
 a:focus {
@@ -1148,8 +1154,8 @@ hr {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
+  padding: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
@@ -1207,7 +1213,7 @@ h6 .small,
 .h4 .small,
 .h5 .small,
 .h6 .small {
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
   color: #777777;
 }
@@ -1301,8 +1307,8 @@ small,
 }
 mark,
 .mark {
-  padding: .2em;
   background-color: #fcf8e3;
+  padding: .2em;
 }
 .text-left {
   text-align: left;
@@ -1429,8 +1435,8 @@ ol ol {
 }
 .list-inline > li {
   display: inline-block;
-  padding-right: 5px;
   padding-left: 5px;
+  padding-right: 5px;
 }
 dl {
   margin-top: 0;
@@ -1441,7 +1447,7 @@ dd {
   line-height: 1.42857143;
 }
 dt {
-  font-weight: 700;
+  font-weight: bold;
 }
 dd {
   margin-left: 0;
@@ -1463,6 +1469,7 @@ dd {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
+  border-bottom: 1px dotted #777777;
 }
 .initialism {
   font-size: 90%;
@@ -1490,15 +1497,15 @@ blockquote .small {
 blockquote footer:before,
 blockquote small:before,
 blockquote .small:before {
-  content: "\2014 \00A0";
+  content: '\2014 \00A0';
 }
 .blockquote-reverse,
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  text-align: right;
   border-right: 5px solid #eeeeee;
   border-left: 0;
+  text-align: right;
 }
 .blockquote-reverse footer:before,
 blockquote.pull-right footer:before,
@@ -1506,7 +1513,7 @@ blockquote.pull-right footer:before,
 blockquote.pull-right small:before,
 .blockquote-reverse .small:before,
 blockquote.pull-right .small:before {
-  content: "";
+  content: '';
 }
 .blockquote-reverse footer:after,
 blockquote.pull-right footer:after,
@@ -1514,7 +1521,7 @@ blockquote.pull-right footer:after,
 blockquote.pull-right small:after,
 .blockquote-reverse .small:after,
 blockquote.pull-right .small:after {
-  content: "\00A0 \2014";
+  content: '\00A0 \2014';
 }
 address {
   margin-bottom: 18px;
@@ -1545,7 +1552,7 @@ kbd {
 kbd kbd {
   padding: 0;
   font-size: 100%;
-  font-weight: 700;
+  font-weight: bold;
   box-shadow: none;
 }
 pre {
@@ -1554,9 +1561,9 @@ pre {
   margin: 0 0 9px;
   font-size: 12px;
   line-height: 1.42857143;
-  color: #333333;
   word-break: break-all;
   word-wrap: break-word;
+  color: #333333;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 2px;
@@ -1574,10 +1581,10 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 0px;
-  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 @media (min-width: 768px) {
   .container {
@@ -1595,28 +1602,20 @@ pre code {
   }
 }
 .container-fluid {
-  padding-right: 0px;
-  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .row {
-  margin-right: 0px;
   margin-left: 0px;
-}
-.row-no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-}
-.row-no-gutters [class*="col-"] {
-  padding-right: 0;
-  padding-left: 0;
+  margin-right: 0px;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 0px;
   padding-left: 0px;
+  padding-right: 0px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -2251,17 +2250,6 @@ pre code {
 table {
   background-color: transparent;
 }
-table col[class*="col-"] {
-  position: static;
-  display: table-column;
-  float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-  position: static;
-  display: table-cell;
-  float: none;
-}
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -2333,6 +2321,17 @@ th {
 }
 .table-hover > tbody > tr:hover {
   background-color: #f5f5f5;
+}
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell;
 }
 .table > thead > tr > td.active,
 .table > tbody > tr > td.active,
@@ -2440,8 +2439,8 @@ th {
   background-color: #ebcccc;
 }
 .table-responsive {
-  min-height: .01%;
   overflow-x: auto;
+  min-height: 0.01%;
 }
 @media screen and (max-width: 767px) {
   .table-responsive {
@@ -2489,10 +2488,10 @@ th {
   }
 }
 fieldset {
-  min-width: 0;
   padding: 0;
   margin: 0;
   border: 0;
+  min-width: 0;
 }
 legend {
   display: block;
@@ -2509,28 +2508,18 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: 700;
+  font-weight: bold;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-appearance: none;
-  appearance: none;
 }
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9;
   line-height: normal;
-}
-input[type="radio"][disabled],
-input[type="checkbox"][disabled],
-input[type="radio"].disabled,
-input[type="checkbox"].disabled,
-fieldset[disabled] input[type="radio"],
-fieldset[disabled] input[type="checkbox"] {
-  cursor: not-allowed;
 }
 input[type="file"] {
   display: block;
@@ -2577,8 +2566,8 @@ output {
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .form-control::-moz-placeholder {
   color: #999;
@@ -2591,8 +2580,8 @@ output {
   color: #999;
 }
 .form-control::-ms-expand {
-  background-color: transparent;
   border: 0;
+  background-color: transparent;
 }
 .form-control[disabled],
 .form-control[readonly],
@@ -2606,6 +2595,9 @@ fieldset[disabled] .form-control {
 }
 textarea.form-control {
   height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: none;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"].form-control,
@@ -2645,18 +2637,12 @@ textarea.form-control {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.radio.disabled label,
-.checkbox.disabled label,
-fieldset[disabled] .radio label,
-fieldset[disabled] .checkbox label {
-  cursor: not-allowed;
-}
 .radio label,
 .checkbox label {
   min-height: 18px;
   padding-left: 20px;
   margin-bottom: 0;
-  font-weight: 400;
+  font-weight: normal;
   cursor: pointer;
 }
 .radio input[type="radio"],
@@ -2664,8 +2650,8 @@ fieldset[disabled] .checkbox label {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-top: 4px \9;
   margin-left: -20px;
+  margin-top: 4px \9;
 }
 .radio + .radio,
 .checkbox + .checkbox {
@@ -2677,9 +2663,22 @@ fieldset[disabled] .checkbox label {
   display: inline-block;
   padding-left: 20px;
   margin-bottom: 0;
-  font-weight: 400;
   vertical-align: middle;
+  font-weight: normal;
   cursor: pointer;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"].disabled,
+input[type="checkbox"].disabled,
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+  cursor: not-allowed;
 }
 .radio-inline.disabled,
 .checkbox-inline.disabled,
@@ -2687,21 +2686,22 @@ fieldset[disabled] .radio-inline,
 fieldset[disabled] .checkbox-inline {
   cursor: not-allowed;
 }
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px;
+.radio.disabled label,
+.checkbox.disabled label,
+fieldset[disabled] .radio label,
+fieldset[disabled] .checkbox label {
+  cursor: not-allowed;
 }
 .form-control-static {
-  min-height: 31px;
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
+  min-height: 31px;
 }
 .form-control-static.input-lg,
 .form-control-static.input-sm {
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 .input-sm {
   height: 30px;
@@ -2833,8 +2833,8 @@ select[multiple].input-lg {
 }
 .has-success .input-group-addon {
   color: #3c763d;
-  background-color: #dff0d8;
   border-color: #3c763d;
+  background-color: #dff0d8;
 }
 .has-success .form-control-feedback {
   color: #3c763d;
@@ -2863,8 +2863,8 @@ select[multiple].input-lg {
 }
 .has-warning .input-group-addon {
   color: #8a6d3b;
-  background-color: #fcf8e3;
   border-color: #8a6d3b;
+  background-color: #fcf8e3;
 }
 .has-warning .form-control-feedback {
   color: #8a6d3b;
@@ -2893,8 +2893,8 @@ select[multiple].input-lg {
 }
 .has-error .input-group-addon {
   color: #a94442;
-  background-color: #f2dede;
   border-color: #a94442;
+  background-color: #f2dede;
 }
 .has-error .form-control-feedback {
   color: #a94442;
@@ -2965,23 +2965,23 @@ select[multiple].input-lg {
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
 .form-horizontal .checkbox-inline {
-  padding-top: 7px;
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 7px;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
   min-height: 25px;
 }
 .form-horizontal .form-group {
-  margin-right: 0px;
   margin-left: 0px;
+  margin-right: 0px;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
-    padding-top: 7px;
-    margin-bottom: 0;
     text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -3004,12 +3004,12 @@ select[multiple].input-lg {
   margin-bottom: 0;
   font-weight: normal;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
+  white-space: nowrap;
   padding: 6px 12px;
   font-size: 13px;
   line-height: 1.42857143;
@@ -3036,8 +3036,8 @@ select[multiple].input-lg {
 }
 .btn:active,
 .btn.active {
-  background-image: none;
   outline: 0;
+  background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
@@ -3045,8 +3045,8 @@ select[multiple].input-lg {
 .btn[disabled],
 fieldset[disabled] .btn {
   cursor: not-allowed;
-  filter: alpha(opacity=65);
   opacity: 0.65;
+  filter: alpha(opacity=65);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3075,7 +3075,6 @@ fieldset[disabled] a.btn {
 .open > .dropdown-toggle.btn-default {
   color: #333;
   background-color: #e6e6e6;
-  background-image: none;
   border-color: #adadad;
 }
 .btn-default:active:hover,
@@ -3090,6 +3089,11 @@ fieldset[disabled] a.btn {
   color: #333;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-image: none;
 }
 .btn-default.disabled:hover,
 .btn-default[disabled]:hover,
@@ -3128,7 +3132,6 @@ fieldset[disabled] .btn-default.focus {
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
   background-color: #286090;
-  background-image: none;
   border-color: #204d74;
 }
 .btn-primary:active:hover,
@@ -3143,6 +3146,11 @@ fieldset[disabled] .btn-default.focus {
   color: #fff;
   background-color: #204d74;
   border-color: #122b40;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
 }
 .btn-primary.disabled:hover,
 .btn-primary[disabled]:hover,
@@ -3181,7 +3189,6 @@ fieldset[disabled] .btn-primary.focus {
 .open > .dropdown-toggle.btn-success {
   color: #fff;
   background-color: #449d44;
-  background-image: none;
   border-color: #398439;
 }
 .btn-success:active:hover,
@@ -3196,6 +3203,11 @@ fieldset[disabled] .btn-primary.focus {
   color: #fff;
   background-color: #398439;
   border-color: #255625;
+}
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  background-image: none;
 }
 .btn-success.disabled:hover,
 .btn-success[disabled]:hover,
@@ -3234,7 +3246,6 @@ fieldset[disabled] .btn-success.focus {
 .open > .dropdown-toggle.btn-info {
   color: #fff;
   background-color: #31b0d5;
-  background-image: none;
   border-color: #269abc;
 }
 .btn-info:active:hover,
@@ -3249,6 +3260,11 @@ fieldset[disabled] .btn-success.focus {
   color: #fff;
   background-color: #269abc;
   border-color: #1b6d85;
+}
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  background-image: none;
 }
 .btn-info.disabled:hover,
 .btn-info[disabled]:hover,
@@ -3287,7 +3303,6 @@ fieldset[disabled] .btn-info.focus {
 .open > .dropdown-toggle.btn-warning {
   color: #fff;
   background-color: #ec971f;
-  background-image: none;
   border-color: #d58512;
 }
 .btn-warning:active:hover,
@@ -3302,6 +3317,11 @@ fieldset[disabled] .btn-info.focus {
   color: #fff;
   background-color: #d58512;
   border-color: #985f0d;
+}
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  background-image: none;
 }
 .btn-warning.disabled:hover,
 .btn-warning[disabled]:hover,
@@ -3340,7 +3360,6 @@ fieldset[disabled] .btn-warning.focus {
 .open > .dropdown-toggle.btn-danger {
   color: #fff;
   background-color: #c9302c;
-  background-image: none;
   border-color: #ac2925;
 }
 .btn-danger:active:hover,
@@ -3355,6 +3374,11 @@ fieldset[disabled] .btn-warning.focus {
   color: #fff;
   background-color: #ac2925;
   border-color: #761c19;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  background-image: none;
 }
 .btn-danger.disabled:hover,
 .btn-danger[disabled]:hover,
@@ -3373,8 +3397,8 @@ fieldset[disabled] .btn-danger.focus {
   background-color: #fff;
 }
 .btn-link {
-  font-weight: 400;
-  color: #296eaa;
+  color: #337ab7;
+  font-weight: normal;
   border-radius: 0;
 }
 .btn-link,
@@ -3394,7 +3418,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #1a466c;
+  color: #23527c;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3498,16 +3522,16 @@ tbody.collapse.in {
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
+  list-style: none;
   font-size: 13px;
   text-align: left;
-  list-style: none;
   background-color: #fff;
-  background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -3523,15 +3547,15 @@ tbody.collapse.in {
   display: block;
   padding: 3px 20px;
   clear: both;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.42857143;
   color: #333333;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #262626;
   text-decoration: none;
+  color: #262626;
   background-color: #f5f5f5;
 }
 .dropdown-menu > .active > a,
@@ -3539,8 +3563,8 @@ tbody.collapse.in {
 .dropdown-menu > .active > a:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #337ab7;
   outline: 0;
+  background-color: #337ab7;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3550,10 +3574,10 @@ tbody.collapse.in {
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
   text-decoration: none;
-  cursor: not-allowed;
   background-color: transparent;
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
 }
 .open > .dropdown-menu {
   display: block;
@@ -3562,12 +3586,12 @@ tbody.collapse.in {
   outline: 0;
 }
 .dropdown-menu-right {
-  right: 0;
   left: auto;
+  right: 0;
 }
 .dropdown-menu-left {
-  right: auto;
   left: 0;
+  right: auto;
 }
 .dropdown-header {
   display: block;
@@ -3579,10 +3603,10 @@ tbody.collapse.in {
 }
 .dropdown-backdrop {
   position: fixed;
-  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  top: 0;
   z-index: 990;
 }
 .pull-right > .dropdown-menu {
@@ -3591,10 +3615,10 @@ tbody.collapse.in {
 }
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
-  content: "";
   border-top: 0;
   border-bottom: 4px dashed;
   border-bottom: 4px solid \9;
+  content: "";
 }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
@@ -3604,12 +3628,12 @@ tbody.collapse.in {
 }
 @media (min-width: 541px) {
   .navbar-right .dropdown-menu {
-    right: 0;
     left: auto;
+    right: 0;
   }
   .navbar-right .dropdown-menu-left {
-    right: auto;
     left: 0;
+    right: auto;
   }
 }
 .btn-group,
@@ -3659,13 +3683,13 @@ tbody.collapse.in {
   margin-left: 0;
 }
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-  border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 .btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
-  border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .btn-group > .btn-group {
   float: left;
@@ -3675,24 +3699,24 @@ tbody.collapse.in {
 }
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
-  border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
-  border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   outline: 0;
 }
 .btn-group > .btn + .dropdown-toggle {
-  padding-right: 8px;
   padding-left: 8px;
+  padding-right: 8px;
 }
 .btn-group > .btn-lg + .dropdown-toggle {
-  padding-right: 12px;
   padding-left: 12px;
+  padding-right: 12px;
 }
 .btn-group.open .dropdown-toggle {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -3734,14 +3758,14 @@ tbody.collapse.in {
   border-radius: 0;
 }
 .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 .btn-group-vertical > .btn:last-child:not(:first-child) {
-  border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
@@ -3754,8 +3778,8 @@ tbody.collapse.in {
   border-bottom-left-radius: 0;
 }
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
-  border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .btn-group-justified {
   display: table;
@@ -3765,8 +3789,8 @@ tbody.collapse.in {
 }
 .btn-group-justified > .btn,
 .btn-group-justified > .btn-group {
-  display: table-cell;
   float: none;
+  display: table-cell;
   width: 1%;
 }
 .btn-group-justified > .btn-group .btn {
@@ -3790,8 +3814,8 @@ tbody.collapse.in {
 }
 .input-group[class*="col-"] {
   float: none;
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 .input-group .form-control {
   position: relative;
@@ -3868,7 +3892,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-addon {
   padding: 6px 12px;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
   color: #555555;
   text-align: center;
@@ -3897,8 +3921,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-  border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 .input-group-addon:first-child {
   border-right: 0;
@@ -3910,8 +3934,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .input-group-addon:last-child {
   border-left: 0;
@@ -3942,8 +3966,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 .nav {
-  padding-left: 0;
   margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 }
 .nav > li {
@@ -3967,14 +3991,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li.disabled > a:focus {
   color: #777777;
   text-decoration: none;
-  cursor: not-allowed;
   background-color: transparent;
+  cursor: not-allowed;
 }
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #296eaa;
+  border-color: #337ab7;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4005,10 +4029,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  cursor: default;
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
+  cursor: default;
 }
 .nav-tabs.nav-justified {
   width: 100%;
@@ -4018,8 +4042,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: none;
 }
 .nav-tabs.nav-justified > li > a {
-  margin-bottom: 5px;
   text-align: center;
+  margin-bottom: 5px;
 }
 .nav-tabs.nav-justified > .dropdown .dropdown-menu {
   top: auto;
@@ -4083,8 +4107,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: none;
 }
 .nav-justified > li > a {
-  margin-bottom: 5px;
   text-align: center;
+  margin-bottom: 5px;
 }
 .nav-justified > .dropdown .dropdown-menu {
   top: auto;
@@ -4130,8 +4154,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
-  border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .navbar {
   position: relative;
@@ -4150,9 +4174,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-collapse {
+  overflow-x: visible;
   padding-right: 0px;
   padding-left: 0px;
-  overflow-x: visible;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
@@ -4178,16 +4202,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-fixed-top .navbar-collapse,
   .navbar-static-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
   }
-}
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
 }
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
@@ -4198,21 +4215,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
   }
-}
-@media (min-width: 541px) {
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    border-radius: 0;
-  }
-}
-.navbar-fixed-top {
-  top: 0;
-  border-width: 0 0 1px;
-}
-.navbar-fixed-bottom {
-  bottom: 0;
-  margin-bottom: 0;
-  border-width: 1px 0 0;
 }
 .container > .navbar-header,
 .container-fluid > .navbar-header,
@@ -4239,12 +4241,34 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-radius: 0;
   }
 }
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+@media (min-width: 541px) {
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    border-radius: 0;
+  }
+}
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+.navbar-fixed-bottom {
+  bottom: 0;
+  margin-bottom: 0;
+  border-width: 1px 0 0;
+}
 .navbar-brand {
   float: left;
-  height: 30px;
   padding: 6px 0px;
   font-size: 17px;
   line-height: 18px;
+  height: 30px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4262,8 +4286,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle {
   position: relative;
   float: right;
-  padding: 9px 10px;
   margin-right: 0px;
+  padding: 9px 10px;
   margin-top: -2px;
   margin-bottom: -2px;
   background-color: transparent;
@@ -4332,9 +4356,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-form {
-  padding: 10px 0px;
-  margin-right: 0px;
   margin-left: 0px;
+  margin-right: 0px;
+  padding: 10px 0px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -4403,24 +4427,24 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 541px) {
   .navbar-form {
     width: auto;
+    border: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    margin-right: 0;
-    margin-left: 0;
-    border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
 }
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
-  border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4443,8 +4467,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 541px) {
   .navbar-text {
     float: left;
-    margin-right: 0px;
     margin-left: 0px;
+    margin-right: 0px;
   }
 }
 @media (min-width: 541px) {
@@ -4466,18 +4490,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #565656;
+  color: #777;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #3c3c3c;
+  color: #5e5e5e;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #565656;
+  color: #777;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -4496,15 +4520,29 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #ccc;
   background-color: transparent;
 }
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #e7e7e7;
+}
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #555;
   background-color: #e7e7e7;
+  color: #555;
 }
 @media (max-width: 540px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #565656;
+    color: #777;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4524,28 +4562,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-color: transparent;
   }
 }
-.navbar-default .navbar-toggle {
-  border-color: #ddd;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #e7e7e7;
-}
 .navbar-default .navbar-link {
-  color: #565656;
+  color: #777;
 }
 .navbar-default .navbar-link:hover {
   color: #333;
 }
 .navbar-default .btn-link {
-  color: #565656;
+  color: #777;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
@@ -4592,11 +4616,25 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #444;
   background-color: transparent;
 }
+.navbar-inverse .navbar-toggle {
+  border-color: #333;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #333;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #101010;
+}
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  color: #fff;
   background-color: #080808;
+  color: #fff;
 }
 @media (max-width: 540px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
@@ -4625,20 +4663,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     color: #444;
     background-color: transparent;
   }
-}
-.navbar-inverse .navbar-toggle {
-  border-color: #333;
-}
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-  background-color: #333;
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #fff;
-}
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border-color: #101010;
 }
 .navbar-inverse .navbar-link {
   color: #9d9d9d;
@@ -4670,9 +4694,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
+  content: "/\00a0";
   padding: 0 5px;
   color: #5e5e5e;
-  content: "/\00a0";
 }
 .breadcrumb > .active {
   color: #777777;
@@ -4691,32 +4715,32 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   position: relative;
   float: left;
   padding: 6px 12px;
-  margin-left: -1px;
   line-height: 1.42857143;
-  color: #296eaa;
   text-decoration: none;
+  color: #337ab7;
   background-color: #fff;
   border: 1px solid #ddd;
+  margin-left: -1px;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
 }
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #1a466c;
+  color: #23527c;
   background-color: #eeeeee;
   border-color: #ddd;
-}
-.pagination > li:first-child > a,
-.pagination > li:first-child > span {
-  margin-left: 0;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-.pagination > li:last-child > a,
-.pagination > li:last-child > span {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
 }
 .pagination > .active > a,
 .pagination > .active > span,
@@ -4726,9 +4750,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:focus {
   z-index: 3;
   color: #fff;
-  cursor: default;
   background-color: #337ab7;
   border-color: #337ab7;
+  cursor: default;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
@@ -4737,9 +4761,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
   color: #777777;
-  cursor: not-allowed;
   background-color: #fff;
   border-color: #ddd;
+  cursor: not-allowed;
 }
 .pagination-lg > li > a,
 .pagination-lg > li > span {
@@ -4749,13 +4773,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
 }
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .pagination-sm > li > a,
 .pagination-sm > li > span {
@@ -4765,19 +4789,19 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
-  border-top-left-radius: 1px;
   border-bottom-left-radius: 1px;
+  border-top-left-radius: 1px;
 }
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
-  border-top-right-radius: 1px;
   border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
 }
 .pager {
   padding-left: 0;
   margin: 18px 0;
-  text-align: center;
   list-style: none;
+  text-align: center;
 }
 .pager li {
   display: inline;
@@ -4808,14 +4832,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pager .disabled > a:focus,
 .pager .disabled > span {
   color: #777777;
-  cursor: not-allowed;
   background-color: #fff;
+  cursor: not-allowed;
 }
 .label {
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   color: #fff;
   text-align: center;
@@ -4884,11 +4908,11 @@ a.label:focus {
   padding: 3px 7px;
   font-size: 12px;
   font-weight: bold;
-  line-height: 1;
   color: #fff;
-  text-align: center;
-  white-space: nowrap;
+  line-height: 1;
   vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
   background-color: #777777;
   border-radius: 10px;
 }
@@ -4912,7 +4936,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #296eaa;
+  color: #337ab7;
   background-color: #fff;
 }
 .list-group-item > .badge {
@@ -4945,9 +4969,9 @@ a.badge:focus {
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
-  padding-right: 0px;
-  padding-left: 0px;
   border-radius: 3px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .jumbotron .container {
   max-width: 100%;
@@ -4959,8 +4983,8 @@ a.badge:focus {
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-right: 60px;
     padding-left: 60px;
+    padding-right: 60px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
@@ -4981,13 +5005,13 @@ a.badge:focus {
 }
 .thumbnail > img,
 .thumbnail a > img {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #296eaa;
+  border-color: #337ab7;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -5025,9 +5049,9 @@ a.thumbnail.active {
   color: inherit;
 }
 .alert-success {
-  color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
+  color: #3c763d;
 }
 .alert-success hr {
   border-top-color: #c9e2b3;
@@ -5036,9 +5060,9 @@ a.thumbnail.active {
   color: #2b542c;
 }
 .alert-info {
-  color: #31708f;
   background-color: #d9edf7;
   border-color: #bce8f1;
+  color: #31708f;
 }
 .alert-info hr {
   border-top-color: #a6e1ec;
@@ -5047,9 +5071,9 @@ a.thumbnail.active {
   color: #245269;
 }
 .alert-warning {
-  color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
+  color: #8a6d3b;
 }
 .alert-warning hr {
   border-top-color: #f7e1b5;
@@ -5058,9 +5082,9 @@ a.thumbnail.active {
   color: #66512c;
 }
 .alert-danger {
-  color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
+  color: #a94442;
 }
 .alert-danger hr {
   border-top-color: #e4b9c0;
@@ -5085,9 +5109,9 @@ a.thumbnail.active {
   }
 }
 .progress {
+  overflow: hidden;
   height: 18px;
   margin-bottom: 18px;
-  overflow: hidden;
   background-color: #f5f5f5;
   border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -5161,8 +5185,8 @@ a.thumbnail.active {
 }
 .media,
 .media-body {
-  overflow: hidden;
   zoom: 1;
+  overflow: hidden;
 }
 .media-body {
   width: 10000px;
@@ -5202,8 +5226,8 @@ a.thumbnail.active {
   list-style: none;
 }
 .list-group {
-  padding-left: 0;
   margin-bottom: 20px;
+  padding-left: 0;
 }
 .list-group-item {
   position: relative;
@@ -5214,20 +5238,40 @@ a.thumbnail.active {
   border: 1px solid #ddd;
 }
 .list-group-item:first-child {
-  border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
 }
 .list-group-item:last-child {
   margin-bottom: 0;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
+a.list-group-item,
+button.list-group-item {
+  color: #555;
+}
+a.list-group-item .list-group-item-heading,
+button.list-group-item .list-group-item-heading {
+  color: #333;
+}
+a.list-group-item:hover,
+button.list-group-item:hover,
+a.list-group-item:focus,
+button.list-group-item:focus {
+  text-decoration: none;
+  color: #555;
+  background-color: #f5f5f5;
+}
+button.list-group-item {
+  width: 100%;
+  text-align: left;
+}
 .list-group-item.disabled,
 .list-group-item.disabled:hover,
 .list-group-item.disabled:focus {
+  background-color: #eeeeee;
   color: #777777;
   cursor: not-allowed;
-  background-color: #eeeeee;
 }
 .list-group-item.disabled .list-group-item-heading,
 .list-group-item.disabled:hover .list-group-item-heading,
@@ -5262,26 +5306,6 @@ a.thumbnail.active {
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
   color: #c7ddef;
-}
-a.list-group-item,
-button.list-group-item {
-  color: #555;
-}
-a.list-group-item .list-group-item-heading,
-button.list-group-item .list-group-item-heading {
-  color: #333;
-}
-a.list-group-item:hover,
-button.list-group-item:hover,
-a.list-group-item:focus,
-button.list-group-item:focus {
-  color: #555;
-  text-decoration: none;
-  background-color: #f5f5f5;
-}
-button.list-group-item {
-  width: 100%;
-  text-align: left;
 }
 .list-group-item-success {
   color: #3c763d;
@@ -5421,8 +5445,8 @@ button.list-group-item-danger.active:focus {
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  border-top-left-radius: 1px;
   border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -5459,8 +5483,8 @@ button.list-group-item-danger.active:focus {
 .panel > .list-group:first-child .list-group-item:first-child,
 .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
   border-top: 0;
-  border-top-left-radius: 1px;
   border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
 }
 .panel > .list-group:last-child .list-group-item:last-child,
 .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
@@ -5469,8 +5493,8 @@ button.list-group-item-danger.active:focus {
   border-bottom-left-radius: 1px;
 }
 .panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {
-  border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .panel-heading + .list-group .list-group-item:first-child {
   border-top-width: 0;
@@ -5486,13 +5510,13 @@ button.list-group-item-danger.active:focus {
 .panel > .table caption,
 .panel > .table-responsive > .table caption,
 .panel > .panel-collapse > .table caption {
-  padding-right: 15px;
   padding-left: 15px;
+  padding-right: 15px;
 }
 .panel > .table:first-child,
 .panel > .table-responsive:first-child > .table:first-child {
-  border-top-left-radius: 1px;
   border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
 }
 .panel > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
@@ -5530,8 +5554,8 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
-  border-bottom-right-radius: 1px;
   border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
 }
 .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
@@ -5616,8 +5640,8 @@ button.list-group-item-danger.active:focus {
   border-bottom: 0;
 }
 .panel > .table-responsive {
-  margin-bottom: 0;
   border: 0;
+  margin-bottom: 0;
 }
 .panel-group {
   margin-bottom: 18px;
@@ -5764,10 +5788,10 @@ button.list-group-item-danger.active:focus {
 .embed-responsive video {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 100%;
+  bottom: 0;
   height: 100%;
+  width: 100%;
   border: 0;
 }
 .embed-responsive-16by9 {
@@ -5805,16 +5829,16 @@ button.list-group-item-danger.active:focus {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
   opacity: 0.2;
+  filter: alpha(opacity=20);
 }
 .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-  filter: alpha(opacity=50);
   opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 button.close {
   padding: 0;
@@ -5822,20 +5846,19 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-  appearance: none;
 }
 .modal-open {
   overflow: hidden;
 }
 .modal {
+  display: none;
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1050;
-  display: none;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
@@ -5867,12 +5890,12 @@ button.close {
 .modal-content {
   position: relative;
   background-color: #fff;
-  background-clip: padding-box;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
   outline: 0;
 }
 .modal-backdrop {
@@ -5885,12 +5908,12 @@ button.close {
   background-color: #000;
 }
 .modal-backdrop.fade {
-  filter: alpha(opacity=0);
   opacity: 0;
+  filter: alpha(opacity=0);
 }
 .modal-backdrop.in {
-  filter: alpha(opacity=50);
   opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .modal-header {
   padding: 15px;
@@ -5913,8 +5936,8 @@ button.close {
   border-top: 1px solid #e5e5e5;
 }
 .modal-footer .btn + .btn {
-  margin-bottom: 0;
   margin-left: 5px;
+  margin-bottom: 0;
 }
 .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
@@ -5953,42 +5976,57 @@ button.close {
   display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 400;
-  line-height: 1.42857143;
+  font-weight: normal;
+  letter-spacing: normal;
   line-break: auto;
+  line-height: 1.42857143;
   text-align: left;
   text-align: start;
   text-decoration: none;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: normal;
+  white-space: normal;
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  white-space: normal;
   font-size: 12px;
-  filter: alpha(opacity=0);
   opacity: 0;
+  filter: alpha(opacity=0);
 }
 .tooltip.in {
-  filter: alpha(opacity=90);
   opacity: 0.9;
+  filter: alpha(opacity=90);
 }
 .tooltip.top {
-  padding: 5px 0;
   margin-top: -3px;
+  padding: 5px 0;
 }
 .tooltip.right {
-  padding: 0 5px;
   margin-left: 3px;
+  padding: 0 5px;
 }
 .tooltip.bottom {
-  padding: 5px 0;
   margin-top: 3px;
+  padding: 5px 0;
 }
 .tooltip.left {
-  padding: 0 5px;
   margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 2px;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
 }
 .tooltip.top .tooltip-arrow {
   bottom: 0;
@@ -5998,8 +6036,8 @@ button.close {
   border-top-color: #000;
 }
 .tooltip.top-left .tooltip-arrow {
-  right: 5px;
   bottom: 0;
+  right: 5px;
   margin-bottom: -5px;
   border-width: 5px 5px 0;
   border-top-color: #000;
@@ -6046,21 +6084,6 @@ button.close {
   border-width: 0 5px 5px;
   border-bottom-color: #000;
 }
-.tooltip-inner {
-  max-width: 200px;
-  padding: 3px 8px;
-  color: #fff;
-  text-align: center;
-  background-color: #000;
-  border-radius: 2px;
-}
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
 .popover {
   position: absolute;
   top: 0;
@@ -6071,19 +6094,19 @@ button.close {
   padding: 1px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 400;
-  line-height: 1.42857143;
+  font-weight: normal;
+  letter-spacing: normal;
   line-break: auto;
+  line-height: 1.42857143;
   text-align: left;
   text-align: start;
   text-decoration: none;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: normal;
+  white-space: normal;
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  white-space: normal;
   font-size: 13px;
   background-color: #fff;
   background-clip: padding-box;
@@ -6105,8 +6128,16 @@ button.close {
 .popover.left {
   margin-left: -10px;
 }
-.popover > .arrow {
-  border-width: 11px;
+.popover-title {
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 13px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 2px 2px 0 0;
+}
+.popover-content {
+  padding: 9px 14px;
 }
 .popover > .arrow,
 .popover > .arrow:after {
@@ -6117,52 +6148,55 @@ button.close {
   border-color: transparent;
   border-style: solid;
 }
+.popover > .arrow {
+  border-width: 11px;
+}
 .popover > .arrow:after {
-  content: "";
   border-width: 10px;
+  content: "";
 }
 .popover.top > .arrow {
-  bottom: -11px;
   left: 50%;
   margin-left: -11px;
+  border-bottom-width: 0;
   border-top-color: #999999;
   border-top-color: rgba(0, 0, 0, 0.25);
-  border-bottom-width: 0;
+  bottom: -11px;
 }
 .popover.top > .arrow:after {
+  content: " ";
   bottom: 1px;
   margin-left: -10px;
-  content: " ";
-  border-top-color: #fff;
   border-bottom-width: 0;
+  border-top-color: #fff;
 }
 .popover.right > .arrow {
   top: 50%;
   left: -11px;
   margin-top: -11px;
+  border-left-width: 0;
   border-right-color: #999999;
   border-right-color: rgba(0, 0, 0, 0.25);
-  border-left-width: 0;
 }
 .popover.right > .arrow:after {
-  bottom: -10px;
-  left: 1px;
   content: " ";
-  border-right-color: #fff;
+  left: 1px;
+  bottom: -10px;
   border-left-width: 0;
+  border-right-color: #fff;
 }
 .popover.bottom > .arrow {
-  top: -11px;
   left: 50%;
   margin-left: -11px;
   border-top-width: 0;
   border-bottom-color: #999999;
   border-bottom-color: rgba(0, 0, 0, 0.25);
+  top: -11px;
 }
 .popover.bottom > .arrow:after {
+  content: " ";
   top: 1px;
   margin-left: -10px;
-  content: " ";
   border-top-width: 0;
   border-bottom-color: #fff;
 }
@@ -6175,34 +6209,23 @@ button.close {
   border-left-color: rgba(0, 0, 0, 0.25);
 }
 .popover.left > .arrow:after {
-  right: 1px;
-  bottom: -10px;
   content: " ";
+  right: 1px;
   border-right-width: 0;
   border-left-color: #fff;
-}
-.popover-title {
-  padding: 8px 14px;
-  margin: 0;
-  font-size: 13px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
-  border-radius: 2px 2px 0 0;
-}
-.popover-content {
-  padding: 9px 14px;
+  bottom: -10px;
 }
 .carousel {
   position: relative;
 }
 .carousel-inner {
   position: relative;
-  width: 100%;
   overflow: hidden;
+  width: 100%;
 }
 .carousel-inner > .item {
-  position: relative;
   display: none;
+  position: relative;
   -webkit-transition: 0.6s ease-in-out left;
   -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
@@ -6277,40 +6300,40 @@ button.close {
 .carousel-control {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   width: 15%;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
   font-size: 20px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   background-color: rgba(0, 0, 0, 0);
-  filter: alpha(opacity=50);
-  opacity: 0.5;
 }
 .carousel-control.left {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
   background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
 .carousel-control.right {
-  right: 0;
   left: auto;
+  right: 0;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
   background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
 .carousel-control:hover,
 .carousel-control:focus {
+  outline: 0;
   color: #fff;
   text-decoration: none;
-  outline: 0;
-  filter: alpha(opacity=90);
   opacity: 0.9;
+  filter: alpha(opacity=90);
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
@@ -6318,9 +6341,9 @@ button.close {
 .carousel-control .glyphicon-chevron-right {
   position: absolute;
   top: 50%;
+  margin-top: -10px;
   z-index: 5;
   display: inline-block;
-  margin-top: -10px;
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
@@ -6336,14 +6359,14 @@ button.close {
 .carousel-control .icon-next {
   width: 20px;
   height: 20px;
-  font-family: serif;
   line-height: 1;
+  font-family: serif;
 }
 .carousel-control .icon-prev:before {
-  content: "\2039";
+  content: '\2039';
 }
 .carousel-control .icon-next:before {
-  content: "\203a";
+  content: '\203a';
 }
 .carousel-indicators {
   position: absolute;
@@ -6351,10 +6374,10 @@ button.close {
   left: 50%;
   z-index: 15;
   width: 60%;
-  padding-left: 0;
   margin-left: -30%;
-  text-align: center;
+  padding-left: 0;
   list-style: none;
+  text-align: center;
 }
 .carousel-indicators li {
   display: inline-block;
@@ -6362,23 +6385,23 @@ button.close {
   height: 10px;
   margin: 1px;
   text-indent: -999px;
+  border: 1px solid #fff;
+  border-radius: 10px;
   cursor: pointer;
   background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #fff;
-  border-radius: 10px;
 }
 .carousel-indicators .active {
+  margin: 0;
   width: 12px;
   height: 12px;
-  margin: 0;
   background-color: #fff;
 }
 .carousel-caption {
   position: absolute;
+  left: 15%;
   right: 15%;
   bottom: 20px;
-  left: 15%;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -6408,8 +6431,8 @@ button.close {
     margin-right: -10px;
   }
   .carousel-caption {
-    right: 20%;
     left: 20%;
+    right: 20%;
     padding-bottom: 30px;
   }
   .carousel-indicators {
@@ -6450,8 +6473,8 @@ button.close {
 .modal-footer:after,
 .item_buttons:before,
 .item_buttons:after {
-  display: table;
   content: " ";
+  display: table;
 }
 .clearfix:after,
 .dl-horizontal dd:after,
@@ -6474,8 +6497,8 @@ button.close {
 }
 .center-block {
   display: block;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 .pull-right {
   float: right !important;
@@ -9102,7 +9125,7 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatibility layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box 
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
 `Modern browsers` comments below).  Browsers that are known to implement this 
@@ -9463,108 +9486,88 @@ span#login_widget {
   float: left;
 }
 span#login_widget > .button,
-#logout,
-#shutdown {
+#logout {
   color: #333;
   background-color: #fff;
   border-color: #ccc;
-  margin-left: 10px;
 }
 span#login_widget > .button:focus,
 #logout:focus,
-#shutdown:focus,
 span#login_widget > .button.focus,
-#logout.focus,
-#shutdown.focus {
+#logout.focus {
   color: #333;
   background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
 span#login_widget > .button:hover,
-#logout:hover,
-#shutdown:hover {
+#logout:hover {
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 span#login_widget > .button:active,
 #logout:active,
-#shutdown:active,
 span#login_widget > .button.active,
 #logout.active,
-#shutdown.active,
 .open > .dropdown-togglespan#login_widget > .button,
-.open > .dropdown-toggle#logout,
-.open > .dropdown-toggle#shutdown {
+.open > .dropdown-toggle#logout {
   color: #333;
   background-color: #e6e6e6;
-  background-image: none;
   border-color: #adadad;
 }
 span#login_widget > .button:active:hover,
 #logout:active:hover,
-#shutdown:active:hover,
 span#login_widget > .button.active:hover,
 #logout.active:hover,
-#shutdown.active:hover,
 .open > .dropdown-togglespan#login_widget > .button:hover,
 .open > .dropdown-toggle#logout:hover,
-.open > .dropdown-toggle#shutdown:hover,
 span#login_widget > .button:active:focus,
 #logout:active:focus,
-#shutdown:active:focus,
 span#login_widget > .button.active:focus,
 #logout.active:focus,
-#shutdown.active:focus,
 .open > .dropdown-togglespan#login_widget > .button:focus,
 .open > .dropdown-toggle#logout:focus,
-.open > .dropdown-toggle#shutdown:focus,
 span#login_widget > .button:active.focus,
 #logout:active.focus,
-#shutdown:active.focus,
 span#login_widget > .button.active.focus,
 #logout.active.focus,
-#shutdown.active.focus,
 .open > .dropdown-togglespan#login_widget > .button.focus,
-.open > .dropdown-toggle#logout.focus,
-.open > .dropdown-toggle#shutdown.focus {
+.open > .dropdown-toggle#logout.focus {
   color: #333;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
 }
+span#login_widget > .button:active,
+#logout:active,
+span#login_widget > .button.active,
+#logout.active,
+.open > .dropdown-togglespan#login_widget > .button,
+.open > .dropdown-toggle#logout {
+  background-image: none;
+}
 span#login_widget > .button.disabled:hover,
 #logout.disabled:hover,
-#shutdown.disabled:hover,
 span#login_widget > .button[disabled]:hover,
 #logout[disabled]:hover,
-#shutdown[disabled]:hover,
 fieldset[disabled] span#login_widget > .button:hover,
 fieldset[disabled] #logout:hover,
-fieldset[disabled] #shutdown:hover,
 span#login_widget > .button.disabled:focus,
 #logout.disabled:focus,
-#shutdown.disabled:focus,
 span#login_widget > .button[disabled]:focus,
 #logout[disabled]:focus,
-#shutdown[disabled]:focus,
 fieldset[disabled] span#login_widget > .button:focus,
 fieldset[disabled] #logout:focus,
-fieldset[disabled] #shutdown:focus,
 span#login_widget > .button.disabled.focus,
 #logout.disabled.focus,
-#shutdown.disabled.focus,
 span#login_widget > .button[disabled].focus,
 #logout[disabled].focus,
-#shutdown[disabled].focus,
 fieldset[disabled] span#login_widget > .button.focus,
-fieldset[disabled] #logout.focus,
-fieldset[disabled] #shutdown.focus {
+fieldset[disabled] #logout.focus {
   background-color: #fff;
   border-color: #ccc;
 }
 span#login_widget > .button .badge,
-#logout .badge,
-#shutdown .badge {
+#logout .badge {
   color: #fff;
   background-color: #333;
 }
@@ -9609,16 +9612,6 @@ span#login_widget > .button .badge,
     margin-left: 12px;
     margin-right: 12px;
   }
-}
-/* rtl fixes for the error, connecting, and renaming window */
-[dir="rtl"] .modal-footer {
-  text-align: left !important;
-}
-[dir="rtl"] .close {
-  float: left;
-}
-[dir="rtl"] .fa-step-forward::before {
-  content: "\f048";
 }
 /*!
 *
@@ -9808,10 +9801,6 @@ ul.breadcrumb span {
   margin-right: 7px;
   margin-left: 7px;
 }
-.file_size {
-  width: 65px;
-  text-align: right;
-}
 [dir="rtl"] .item_modified.pull-right {
   float: left !important;
   float: left;
@@ -9835,7 +9824,7 @@ ul.breadcrumb span {
 }
 .item_buttons .running-indicator {
   padding-top: 4px;
-  color: #357935;
+  color: #5cb85c;
 }
 .item_buttons .kernel-name {
   padding-top: 4px;
@@ -10348,6 +10337,63 @@ ul#new-menu {
 .ansi-underline {
   text-decoration: underline;
 }
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
 div.cell {
   /* Old browsers */
   display: -webkit-box;
@@ -10584,35 +10630,10 @@ div.input {
     align-items: stretch;
   }
 }
-div.prompt_container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: right;
-}
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_prompt {
   color: #303F9F;
   border-top: 1px solid transparent;
-}
-div.run_this_cell {
-  display: none;
-  cursor: pointer;
-  color: #333;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 2ex;
-  padding-right: 2ex;
-  width: 1ex;
-}
-div.prompt {
-  min-width: 15ex;
-}
-@media (-moz-touch-enabled: 1), (any-pointer: coarse) {
-  div.run_this_cell {
-    display: block;
-  }
 }
 div.input_area > div.highlight {
   margin: 0.4em;
@@ -10707,7 +10728,7 @@ Adapted from GitHub theme
   color: #BA2121;
 }
 .highlight-comment {
-  color: #007979;
+  color: #408080;
   font-style: italic;
 }
 .highlight-number {
@@ -10789,7 +10810,7 @@ Adapted from GitHub theme
   color: #333333;
 }
 .cm-s-ipython span.cm-comment {
-  color: #007979;
+  color: #408080;
   font-style: italic;
 }
 .cm-s-ipython span.cm-string {
@@ -11397,7 +11418,6 @@ div#notebook {
   width: 100%;
   /* This spaces the page away from the edge of the notebook area */
   padding-top: 20px;
-  padding-bottom: 20px;
   margin: 0px;
   outline: none;
   box-sizing: border-box;
@@ -11583,8 +11603,8 @@ kbd {
 .celltoolbar select:focus {
   border-color: #66afe9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .celltoolbar select::-moz-placeholder {
   color: #999;
@@ -11597,8 +11617,8 @@ kbd {
   color: #999;
 }
 .celltoolbar select::-ms-expand {
-  background-color: transparent;
   border: 0;
+  background-color: transparent;
 }
 .celltoolbar select[disabled],
 .celltoolbar select[readonly],
@@ -11694,8 +11714,8 @@ select[multiple].celltoolbar select {
 .tags-input button:focus {
   border-color: #66afe9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .cell-tag::-moz-placeholder,
 .tags-input input::-moz-placeholder,
@@ -11716,8 +11736,8 @@ select[multiple].celltoolbar select {
 .cell-tag::-ms-expand,
 .tags-input input::-ms-expand,
 .tags-input button::-ms-expand {
-  background-color: transparent;
   border: 0;
+  background-color: transparent;
 }
 .cell-tag[disabled],
 .tags-input input[disabled],
@@ -11963,7 +11983,7 @@ ul#help_menu li a i {
 .indicator_area {
   float: right !important;
   float: right;
-  color: #565656;
+  color: #777;
   margin-left: 5px;
   margin-right: 5px;
   width: 11px;
@@ -11978,7 +11998,7 @@ ul#help_menu li a i {
 #kernel_indicator {
   float: right !important;
   float: right;
-  color: #565656;
+  color: #777;
   margin-left: 5px;
   margin-right: 5px;
   width: 11px;
@@ -12000,7 +12020,7 @@ ul#help_menu li a i {
 #modal_indicator {
   float: right !important;
   float: right;
-  color: #565656;
+  color: #777;
   margin-left: 5px;
   margin-right: 5px;
   width: 11px;
@@ -12015,7 +12035,7 @@ ul#help_menu li a i {
 #readonly-indicator {
   float: right !important;
   float: right;
-  color: #565656;
+  color: #777;
   margin-left: 5px;
   margin-right: 5px;
   width: 11px;
@@ -12159,7 +12179,7 @@ ul#help_menu li a i {
   margin-left: .3em;
 }
 .notification_widget {
-  color: #565656;
+  color: #777;
   z-index: 10;
   background: rgba(240, 240, 240, 0.5);
   margin-right: 4px;
@@ -12183,7 +12203,6 @@ ul#help_menu li a i {
 .open > .dropdown-toggle.notification_widget {
   color: #333;
   background-color: #e6e6e6;
-  background-image: none;
   border-color: #adadad;
 }
 .notification_widget:active:hover,
@@ -12198,6 +12217,11 @@ ul#help_menu li a i {
   color: #333;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
+}
+.notification_widget:active,
+.notification_widget.active,
+.open > .dropdown-toggle.notification_widget {
+  background-image: none;
 }
 .notification_widget.disabled:hover,
 .notification_widget[disabled]:hover,
@@ -12219,9 +12243,6 @@ fieldset[disabled] .notification_widget.focus {
   color: #fff;
   background-color: #f0ad4e;
   border-color: #eea236;
-  color: #ffffff;
-  background-color: #b46102;
-  border-color: #b46102;
 }
 .notification_widget.warning:focus,
 .notification_widget.warning.focus {
@@ -12239,7 +12260,6 @@ fieldset[disabled] .notification_widget.focus {
 .open > .dropdown-toggle.notification_widget.warning {
   color: #fff;
   background-color: #ec971f;
-  background-image: none;
   border-color: #d58512;
 }
 .notification_widget.warning:active:hover,
@@ -12254,6 +12274,11 @@ fieldset[disabled] .notification_widget.focus {
   color: #fff;
   background-color: #d58512;
   border-color: #985f0d;
+}
+.notification_widget.warning:active,
+.notification_widget.warning.active,
+.open > .dropdown-toggle.notification_widget.warning {
+  background-image: none;
 }
 .notification_widget.warning.disabled:hover,
 .notification_widget.warning[disabled]:hover,
@@ -12292,7 +12317,6 @@ fieldset[disabled] .notification_widget.warning.focus {
 .open > .dropdown-toggle.notification_widget.success {
   color: #fff;
   background-color: #449d44;
-  background-image: none;
   border-color: #398439;
 }
 .notification_widget.success:active:hover,
@@ -12307,6 +12331,11 @@ fieldset[disabled] .notification_widget.warning.focus {
   color: #fff;
   background-color: #398439;
   border-color: #255625;
+}
+.notification_widget.success:active,
+.notification_widget.success.active,
+.open > .dropdown-toggle.notification_widget.success {
+  background-image: none;
 }
 .notification_widget.success.disabled:hover,
 .notification_widget.success[disabled]:hover,
@@ -12345,7 +12374,6 @@ fieldset[disabled] .notification_widget.success.focus {
 .open > .dropdown-toggle.notification_widget.info {
   color: #fff;
   background-color: #31b0d5;
-  background-image: none;
   border-color: #269abc;
 }
 .notification_widget.info:active:hover,
@@ -12360,6 +12388,11 @@ fieldset[disabled] .notification_widget.success.focus {
   color: #fff;
   background-color: #269abc;
   border-color: #1b6d85;
+}
+.notification_widget.info:active,
+.notification_widget.info.active,
+.open > .dropdown-toggle.notification_widget.info {
+  background-image: none;
 }
 .notification_widget.info.disabled:hover,
 .notification_widget.info[disabled]:hover,
@@ -12381,9 +12414,6 @@ fieldset[disabled] .notification_widget.info.focus {
   color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
-  color: #ffffff;
-  background-color: #df0404;
-  border-color: #df0404;
 }
 .notification_widget.danger:focus,
 .notification_widget.danger.focus {
@@ -12401,7 +12431,6 @@ fieldset[disabled] .notification_widget.info.focus {
 .open > .dropdown-toggle.notification_widget.danger {
   color: #fff;
   background-color: #c9302c;
-  background-image: none;
   border-color: #ac2925;
 }
 .notification_widget.danger:active:hover,
@@ -12416,6 +12445,11 @@ fieldset[disabled] .notification_widget.info.focus {
   color: #fff;
   background-color: #ac2925;
   border-color: #761c19;
+}
+.notification_widget.danger:active,
+.notification_widget.danger.active,
+.open > .dropdown-toggle.notification_widget.danger {
+  background-image: none;
 }
 .notification_widget.danger.disabled:hover,
 .notification_widget.danger[disabled]:hover,
@@ -12461,12 +12495,6 @@ div#pager #pager-button-area {
   position: absolute;
   top: 8px;
   right: 20px;
-}
-div#pager #pager-button-area .ui-button {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 10px;
-  padding-left: 10px;
 }
 div#pager #pager-contents {
   position: relative;
@@ -12717,7 +12745,7 @@ li.pulse.open > a.dropdown-toggle {
   transition-duration: 500ms;
   text-overflow: ellipsis;
   overflow: hidden;
-  height: 85px;
+  height: 80px;
 }
 .tooltipbuttons {
   position: absolute;
@@ -12725,17 +12753,9 @@ li.pulse.open > a.dropdown-toggle {
   top: 0px;
   right: 0px;
 }
-.tooltipbuttons .ui-button {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
 .tooltiptext {
   /*avoid the button to overlap on some docstring*/
   padding-right: 30px;
-  /*avoid the ui-icon(s) from overlapping the tooltip*/
-  padding-top: 5px;
 }
 .ipython_tooltip {
   max-width: 700px;
@@ -12796,26 +12816,28 @@ li.pulse.open > a.dropdown-toggle {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
 }
-div.typeahead__container {
-  font: revert;
-}
-ul.typeahead__list i {
+ul.typeahead-list i {
+  margin-left: -10px;
   width: 18px;
 }
-ul.typeahead__list {
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
+ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
 }
-ul.typeahead__list > li > a {
+ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
 }
-ul.typeahead__list  > li > a.pull-right {
+ul.typeahead-list  > li > a.pull-right {
   float: left !important;
   float: left;
 }
-[dir="rtl"] .typeahead__list {
+[dir="rtl"] .typeahead-list {
   text-align: right;
 }
 .cmd-palette .modal-body {
@@ -12902,6 +12924,9 @@ ul.typeahead__list  > li > a.pull-right {
   border-radius: 2px;
   -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
+}
+.terminal-app .terminal,
+.terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
 }
@@ -12912,54 +12937,1658 @@ ul.typeahead__list  > li > a.pull-right {
   color: black;
   background: white;
 }
-.terminal-app .terminado-container-container {
-  padding-top: 20px;
-  height: 100%;
-}
 .terminal-app #terminado-container {
-  height: 100%;
-}
-.btn-danger {
-  color: #ffffff;
-  background-color: #df0404;
-  border-color: #df0404;
-}
-.btn-warning {
-  color: #ffffff;
-  background-color: #b46102;
-  border-color: #b46102;
-}
-.close {
-  float: right;
-  font-size: 19.5px;
-  font-weight: bold;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=60);
-  opacity: 0.6;
-}
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  filter: alpha(opacity=100);
-  opacity: 1;
-}
-button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.navbar-nav > li > a {
-  color: #565656;
-}
-.navbar-nav > li > a:focus {
-  /* -webkit-focus-ring-color = '#5B9DD9' */
-  outline: -webkit-focus-ring-color auto 5px;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.min.css.map */
+    </style>
+<style type="text/css">
+    .highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+    </style>
+
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  }
+  div.output_wrapper {
+    display: block;
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
+  }
+}
+</style>
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+
+<style>
+        .cell.nbinteract-left {
+            width: 50%;
+            float: left;
+        }
+
+        .cell.nbinteract-right {
+            width: 50%;
+            float: right;
+        }
+
+        .cell.nbinteract-hide_in > .input {
+            display: none;
+        }
+
+        .cell.nbinteract-hide_out > .output_wrapper {
+            display: none;
+        }
+
+        .cell:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        div.output_subarea {
+            max-width: initial;
+        }
+
+        .jp-OutputPrompt {
+            display: none;
+        }
+    </style></head>
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container">
+      
+
+
+
+  <div class="cell text_cell">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-From-epidemic-to-pandemic">1. From epidemic to pandemic<a class="anchor-link" href="#1.-From-epidemic-to-pandemic">&#182;</a></h2><p><img style="float: left; margin:5px 20px 5px 1px; width:40%" src="https://www.nps.gov/aboutus/news/images/CDC-coronavirus-image-23311-for-web.jpg?maxwidth=650&autorotate=false"></p>
+<p>In December 2019, COVID-19 coronavirus was first identified in the Wuhan region of China. By March 11, 2020, the World Health Organization (WHO) categorized the COVID-19 outbreak as a pandemic. A lot has happened in the months in between with major outbreaks in Iran, South Korea, and Italy. </p>
+<p>We know that COVID-19 spreads through respiratory droplets, such as through coughing, sneezing, or speaking. But, how quickly did the virus spread across the globe? And, can we see any effect from country-wide policies, like shutdowns and quarantines? </p>
+<p>Fortunately, organizations around the world have been collecting data so that governments can monitor and learn from this pandemic. Notably, the Johns Hopkins University Center for Systems Science and Engineering created a <a href="https://github.com/RamiKrispin/coronavirus">publicly available data repository</a> to consolidate this data from sources like the WHO, the Centers for Disease Control and Prevention (CDC), and the Ministry of Health from multiple countries.</p>
+<p>In this notebook, you will visualize COVID-19 data from the first several weeks of the outbreak to see at what point this virus became a global pandemic.</p>
+<p><em>Please note that information and data regarding COVID-19 is frequently being updated. The data used in this project was pulled on March 17, 2020, and should not be considered to be the most up to date data available.</em></p>
+</div>
+</div>
+</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### pip(optionally) or conda-forge/packages installation on local machine and/or on the cloud (i.e., IBM Watson) </span>
+<span class="c1">## A Jupyter notebook extension to hide code and prompts - https://pypi.org/project/hide-code/0.2.0/</span>
+<span class="c1">## File type identification using libmagic</span>
+<span class="c1"># !pip install python-magic==0.4.18</span>
+<span class="c1">## Easily download, build, install, upgrade, and uninstall Python packages</span>
+<span class="c1"># !pip install setuptools==46.3.1</span>
+<span class="c1">## A built-package format for Python</span>
+<span class="c1"># !pip install wheel</span>
+<span class="c1"># !pip install pixiedust==1.1.18</span>
+<span class="c1"># !pip install --user --upgrade pixiedust</span>
+<span class="c1"># !pip install rosie==1.1.4</span>
+<span class="c1"># !pip install pixiedust_rosie</span>
+<span class="c1"># !pip install hide-code==0.5.5</span>
+<span class="c1">## for formatting purposes.</span>
+<span class="c1"># !conda update nbformat</span>
+<span class="c1">## Generic syntax highlighter suitable for use in code hosting, forums, wikis or other applications that need to prettify source code</span>
+<span class="c1"># !conda install -c anaconda pygments </span>
+<span class="c1">## provides a command line tool to convert Jupyter notebook files to HTML files - https://www.nbinteract.com/</span>
+<span class="c1"># !pip install nbinteract</span>
+<span class="c1">## An interactive, browser-based graphing library for Python</span>
+<span class="c1"># !conda install -c conda-forge plotly</span>
+<span class="c1">## Jupyter Interactive Widgets</span>
+<span class="c1"># !conda install -c conda-forge ipywidgets</span>
+<span class="c1">## Make beautiful maps with Leaflet.js and Python</span>
+<span class="c1"># !conda install -c conda-forge folium</span>
+<span class="c1">## A Jupyter extensions that turns notebooks into web applications. - https://github.com/oschuett/appmode</span>
+<span class="c1"># !pip install appmode</span>
+<span class="c1">## Rendering of live Jupyter notebooks with interactive widgets - https://anaconda.org/conda-forge/voila</span>
+<span class="c1"># !conda install -c conda-forge voila</span>
+<span class="c1">## Gridstack template for voila - https://anaconda.org/conda-forge/voila-gridstack</span>
+<span class="c1"># !conda install -c conda-forge voila-gridstack</span>
+<span class="c1">## Vuetify specific template for Voila - https://anaconda.org/conda-forge/voila-vuetify</span>
+<span class="c1"># !conda install -c conda-forge voila-vuetify</span>
+<span class="c1">## Reveal template for voila - https://anaconda.org/conda-forge/voila-reveal</span>
+<span class="c1"># !conda install -c conda-forge voila-reveal</span>
+<span class="c1">## Material template for Voila - https://anaconda.org/conda-forge/voila-material</span>
+<span class="c1"># !conda install -c conda-forge voila-material</span>
+<span class="c1">## A collection of various different notebook extensions for Jupyter - https://anaconda.org/conda-forge/jupyter_contrib_nbextensions</span>
+<span class="c1"># !conda install -c conda-forge jupyter_contrib_nbextensions</span>
+<span class="c1"># !easy_install ibm_db</span>
+<span class="c1"># !pip install ibm-db==3.0.1</span>
+<span class="c1"># !pip install ijson</span>
+<span class="c1"># A python native weaviate client makes using the Weaviate API easier.</span>
+<span class="c1"># !pip install weaviate-client</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># @hidden_cell</span>
+<span class="c1"># import packages</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">ibm_db</span>
+<span class="kn">import</span> <span class="nn">ibm_db_dbi</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="kn">import</span> <span class="nn">pixiedust</span>
+<span class="c1"># london_info = pixiedust.sampleData(&quot;https://files.datapress.com/</span>
+<span class="c1"># london/dataset/london-borough-profiles/2015-09-24T15:50:01/Londonborough-</span>
+<span class="c1"># profiles.zip&quot;)</span>
+<span class="kn">import</span> <span class="nn">pixiedust_rosie</span>
+<span class="c1"># pixiedust_rosie.wrangle_data()</span>
+
+<span class="c1"># https://www.pluralsight.com/guides/web-scraping-with-request-python</span>
+<span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">reqs</span> <span class="c1"># To use request package with alliance(s) in current program </span>
+<span class="kn">from</span> <span class="nn">requests.exceptions</span> <span class="kn">import</span> <span class="n">HTTPError</span>
+
+<span class="c1"># import ijson</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">weaviate</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pixiedust database opened successfully
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    
+
+
+<div class="output_html rendered_html output_subarea ">
+
+        <div style="margin:10px">
+            <a href="https://github.com/ibm-watson-data-lab/pixiedust" target="_new">
+                <img src="https://github.com/ibm-watson-data-lab/pixiedust/raw/master/docs/_static/pd_icon32.png" style="float:left;margin-right:10px"/>
+            </a>
+            <span>Pixiedust version 1.1.18</span>
+        </div>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># url = &quot;https://raw.githubusercontent.com/pixiedust/pixiedust_rosie/master/sample-data/HCUP_Tutorial.csv&quot;</span>
+<span class="c1"># url = &quot;https://github.com/ibm-watson-data-lab/pixiedust_rosie/raw/master/sample-data/Healthcare_Cost_and_Utilization_Project__HCUP__-_National_Inpatient_Sample.csv&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&quot;</span>
+<span class="n">pixiedust_rosie</span><span class="o">.</span><span class="n">wrangle_data</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Downloading &#39;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&#39; from https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
+Downloaded 169274 bytes
+Creating pandas DataFrame for &#39;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&#39;. Please wait...
+Successfully created pandas DataFrame for &#39;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&#39;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">OSError</span>                                   Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\rosie\internal.py</span> in <span class="ansi-cyan-fg">load</span><span class="ansi-blue-intense-fg ansi-bold">(path, quiet)</span>
+<span class="ansi-green-fg">    143</span>         <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 144</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>_load_from<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;//&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>   <span class="ansi-red-intense-fg ansi-bold"># local</span>
+<span class="ansi-green-fg">    145</span>         <span class="ansi-green-intense-fg ansi-bold">except</span> OSError<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\rosie\internal.py</span> in <span class="ansi-cyan-fg">_load_from</span><span class="ansi-blue-intense-fg ansi-bold">(path_string)</span>
+<span class="ansi-green-fg">    180</span>         libpath <span class="ansi-yellow-intense-fg ansi-bold">=</span> os<span class="ansi-yellow-intense-fg ansi-bold">.</span>path<span class="ansi-yellow-intense-fg ansi-bold">.</span>join<span class="ansi-yellow-intense-fg ansi-bold">(</span>path_string<span class="ansi-yellow-intense-fg ansi-bold">,</span> _librosie_name<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 181</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>_lib <span class="ansi-yellow-intense-fg ansi-bold">=</span> ffi<span class="ansi-yellow-intense-fg ansi-bold">.</span>dlopen<span class="ansi-yellow-intense-fg ansi-bold">(</span>libpath<span class="ansi-yellow-intense-fg ansi-bold">,</span> ffi<span class="ansi-yellow-intense-fg ansi-bold">.</span>RTLD_LAZY <span class="ansi-yellow-intense-fg ansi-bold">|</span> ffi<span class="ansi-yellow-intense-fg ansi-bold">.</span>RTLD_GLOBAL<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    182</span>     _librosie_path <span class="ansi-yellow-intense-fg ansi-bold">=</span> libpath
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\cffi\api.py</span> in <span class="ansi-cyan-fg">dlopen</span><span class="ansi-blue-intense-fg ansi-bold">(self, name, flags)</span>
+<span class="ansi-green-fg">    149</span>         <span class="ansi-green-intense-fg ansi-bold">with</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_lock<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 150</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>lib<span class="ansi-yellow-intense-fg ansi-bold">,</span> function_cache <span class="ansi-yellow-intense-fg ansi-bold">=</span> _make_ffi_library<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> name<span class="ansi-yellow-intense-fg ansi-bold">,</span> flags<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    151</span>             self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_function_caches<span class="ansi-yellow-intense-fg ansi-bold">.</span>append<span class="ansi-yellow-intense-fg ansi-bold">(</span>function_cache<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\cffi\api.py</span> in <span class="ansi-cyan-fg">_make_ffi_library</span><span class="ansi-blue-intense-fg ansi-bold">(ffi, libname, flags)</span>
+<span class="ansi-green-fg">    831</span>     backend <span class="ansi-yellow-intense-fg ansi-bold">=</span> ffi<span class="ansi-yellow-intense-fg ansi-bold">.</span>_backend
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 832</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>backendlib <span class="ansi-yellow-intense-fg ansi-bold">=</span> _load_backend_lib<span class="ansi-yellow-intense-fg ansi-bold">(</span>backend<span class="ansi-yellow-intense-fg ansi-bold">,</span> libname<span class="ansi-yellow-intense-fg ansi-bold">,</span> flags<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    833</span>     <span class="ansi-red-intense-fg ansi-bold">#</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\cffi\api.py</span> in <span class="ansi-cyan-fg">_load_backend_lib</span><span class="ansi-blue-intense-fg ansi-bold">(backend, name, flags)</span>
+<span class="ansi-green-fg">    826</span>             msg <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;%s.  Additionally, %s&#34;</span> <span class="ansi-yellow-intense-fg ansi-bold">%</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>first_error<span class="ansi-yellow-intense-fg ansi-bold">,</span> msg<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 827</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">raise</span> OSError<span class="ansi-yellow-intense-fg ansi-bold">(</span>msg<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    828</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> backend<span class="ansi-yellow-intense-fg ansi-bold">.</span>load_library<span class="ansi-yellow-intense-fg ansi-bold">(</span>path<span class="ansi-yellow-intense-fg ansi-bold">,</span> flags<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">OSError</span>: cannot load library &#39;C:\Users\IT\anaconda3\lib\site-packages\rosie\librosie.so&#39;: error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called &#39;C:\\Users\\IT\\anaconda3\\lib\\site-packages\\rosie\\librosie.so&#39;
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-intense-fg ansi-bold">OSError</span>                                   Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\rosie\internal.py</span> in <span class="ansi-cyan-fg">load</span><span class="ansi-blue-intense-fg ansi-bold">(path, quiet)</span>
+<span class="ansi-green-fg">    146</span>             <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 147</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span>_load_from<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>     <span class="ansi-red-intense-fg ansi-bold"># system</span>
+<span class="ansi-green-fg">    148</span>             <span class="ansi-green-intense-fg ansi-bold">except</span> OSError<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\rosie\internal.py</span> in <span class="ansi-cyan-fg">_load_from</span><span class="ansi-blue-intense-fg ansi-bold">(path_string)</span>
+<span class="ansi-green-fg">    180</span>         libpath <span class="ansi-yellow-intense-fg ansi-bold">=</span> os<span class="ansi-yellow-intense-fg ansi-bold">.</span>path<span class="ansi-yellow-intense-fg ansi-bold">.</span>join<span class="ansi-yellow-intense-fg ansi-bold">(</span>path_string<span class="ansi-yellow-intense-fg ansi-bold">,</span> _librosie_name<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 181</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>_lib <span class="ansi-yellow-intense-fg ansi-bold">=</span> ffi<span class="ansi-yellow-intense-fg ansi-bold">.</span>dlopen<span class="ansi-yellow-intense-fg ansi-bold">(</span>libpath<span class="ansi-yellow-intense-fg ansi-bold">,</span> ffi<span class="ansi-yellow-intense-fg ansi-bold">.</span>RTLD_LAZY <span class="ansi-yellow-intense-fg ansi-bold">|</span> ffi<span class="ansi-yellow-intense-fg ansi-bold">.</span>RTLD_GLOBAL<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    182</span>     _librosie_path <span class="ansi-yellow-intense-fg ansi-bold">=</span> libpath
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\cffi\api.py</span> in <span class="ansi-cyan-fg">dlopen</span><span class="ansi-blue-intense-fg ansi-bold">(self, name, flags)</span>
+<span class="ansi-green-fg">    149</span>         <span class="ansi-green-intense-fg ansi-bold">with</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_lock<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 150</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>lib<span class="ansi-yellow-intense-fg ansi-bold">,</span> function_cache <span class="ansi-yellow-intense-fg ansi-bold">=</span> _make_ffi_library<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> name<span class="ansi-yellow-intense-fg ansi-bold">,</span> flags<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    151</span>             self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_function_caches<span class="ansi-yellow-intense-fg ansi-bold">.</span>append<span class="ansi-yellow-intense-fg ansi-bold">(</span>function_cache<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\cffi\api.py</span> in <span class="ansi-cyan-fg">_make_ffi_library</span><span class="ansi-blue-intense-fg ansi-bold">(ffi, libname, flags)</span>
+<span class="ansi-green-fg">    831</span>     backend <span class="ansi-yellow-intense-fg ansi-bold">=</span> ffi<span class="ansi-yellow-intense-fg ansi-bold">.</span>_backend
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 832</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>backendlib <span class="ansi-yellow-intense-fg ansi-bold">=</span> _load_backend_lib<span class="ansi-yellow-intense-fg ansi-bold">(</span>backend<span class="ansi-yellow-intense-fg ansi-bold">,</span> libname<span class="ansi-yellow-intense-fg ansi-bold">,</span> flags<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    833</span>     <span class="ansi-red-intense-fg ansi-bold">#</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\cffi\api.py</span> in <span class="ansi-cyan-fg">_load_backend_lib</span><span class="ansi-blue-intense-fg ansi-bold">(backend, name, flags)</span>
+<span class="ansi-green-fg">    826</span>             msg <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;%s.  Additionally, %s&#34;</span> <span class="ansi-yellow-intense-fg ansi-bold">%</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>first_error<span class="ansi-yellow-intense-fg ansi-bold">,</span> msg<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 827</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">raise</span> OSError<span class="ansi-yellow-intense-fg ansi-bold">(</span>msg<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    828</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> backend<span class="ansi-yellow-intense-fg ansi-bold">.</span>load_library<span class="ansi-yellow-intense-fg ansi-bold">(</span>path<span class="ansi-yellow-intense-fg ansi-bold">,</span> flags<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">OSError</span>: cannot load library &#39;librosie.so&#39;: error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called &#39;librosie.so&#39;
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-intense-fg ansi-bold">RuntimeError</span>                              Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-3-8a3b1f314e6e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      2</span> <span class="ansi-red-intense-fg ansi-bold"># url = &#34;https://github.com/ibm-watson-data-lab/pixiedust_rosie/raw/master/sample-data/Healthcare_Cost_and_Utilization_Project__HCUP__-_National_Inpatient_Sample.csv&#34;</span>
+<span class="ansi-green-fg">      3</span> url <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>pixiedust_rosie<span class="ansi-yellow-intense-fg ansi-bold">.</span>wrangle_data<span class="ansi-yellow-intense-fg ansi-bold">(</span>url<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pixiedust_rosie\__init__.py</span> in <span class="ansi-cyan-fg">wrangle_data</span><span class="ansi-blue-intense-fg ansi-bold">(url)</span>
+<span class="ansi-green-fg">     38</span>             <span class="ansi-blue-intense-fg ansi-bold">&#34;displayName&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">:</span> url<span class="ansi-yellow-intense-fg ansi-bold">,</span>
+<span class="ansi-green-fg">     39</span>             <span class="ansi-blue-intense-fg ansi-bold">&#34;url&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">:</span> url
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 40</span><span class="ansi-yellow-intense-fg ansi-bold"> }, True).download( data_loader )
+</span>
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pixiedust\utils\sampleData.py</span> in <span class="ansi-cyan-fg">download</span><span class="ansi-blue-intense-fg ansi-bold">(self, dataLoader)</span>
+<span class="ansi-green-fg">    272</span>                 print(&#34;Creating {1} DataFrame for &#39;{0}&#39;. Please wait...&#34;.\
+<span class="ansi-green-fg">    273</span>                     format(displayName, &#39;pySpark&#39; if Environment.hasSpark and not self.forcePandas else &#39;pandas&#39;))
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 274</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span><span class="ansi-green-intense-fg ansi-bold">return</span> dataLoader<span class="ansi-yellow-intense-fg ansi-bold">(</span>path<span class="ansi-yellow-intense-fg ansi-bold">,</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>dataDef<span class="ansi-yellow-intense-fg ansi-bold">.</span>get<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;schema&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    275</span>             <span class="ansi-green-intense-fg ansi-bold">finally</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    276</span>                 print(&#34;Successfully created {1} DataFrame for &#39;{0}&#39;&#34;.\
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pixiedust_rosie\__init__.py</span> in <span class="ansi-cyan-fg">data_loader</span><span class="ansi-blue-intense-fg ansi-bold">(path, schema)</span>
+<span class="ansi-green-fg">     30</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> data_loader<span class="ansi-yellow-intense-fg ansi-bold">(</span>path<span class="ansi-yellow-intense-fg ansi-bold">,</span> schema<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">     31</span>         <span class="ansi-blue-intense-fg ansi-bold">&#34;&#34;&#34;Invoke the PixieRosieApp with the path to the local file&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 32</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>PixieRosieApp<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>run<span class="ansi-yellow-intense-fg ansi-bold">(</span>path<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     33</span> 
+<span class="ansi-green-fg">     34</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> str<span class="ansi-yellow-intense-fg ansi-bold">(</span>url<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">in</span> dataDefs<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pixiedust\display\app\pixieapp.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-intense-fg ansi-bold">(self, entity, **kwargs)</span>
+<span class="ansi-green-fg">    440</span> 
+<span class="ansi-green-fg">    441</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> hasattr<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;pd_initialized&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 442</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>run_method_with_super_classes<span class="ansi-yellow-intense-fg ansi-bold">(</span>cls<span class="ansi-yellow-intense-fg ansi-bold">,</span> self<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;setup&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    443</span>             self<span class="ansi-yellow-intense-fg ansi-bold">.</span>nostore_params <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">True</span>
+<span class="ansi-green-fg">    444</span>             self<span class="ansi-yellow-intense-fg ansi-bold">.</span>pd_initialized <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">True</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pixiedust\display\app\pixieapp.py</span> in <span class="ansi-cyan-fg">run_method_with_super_classes</span><span class="ansi-blue-intense-fg ansi-bold">(cls, instance, method_name)</span>
+<span class="ansi-green-fg">    401</span>                 <span class="ansi-green-intense-fg ansi-bold">if</span> f <span class="ansi-green-intense-fg ansi-bold">not</span> <span class="ansi-green-intense-fg ansi-bold">in</span> fctSet <span class="ansi-green-intense-fg ansi-bold">and</span> callable<span class="ansi-yellow-intense-fg ansi-bold">(</span>f<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    402</span>                     fctSet<span class="ansi-yellow-intense-fg ansi-bold">.</span>add<span class="ansi-yellow-intense-fg ansi-bold">(</span>f<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 403</span><span class="ansi-yellow-intense-fg ansi-bold">                     </span>f<span class="ansi-yellow-intense-fg ansi-bold">(</span>instance<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    404</span> 
+<span class="ansi-green-fg">    405</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> run<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> entity<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pixiedust_rosie\pixie_rosie_UI.py</span> in <span class="ansi-cyan-fg">setup</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">     25</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> setup<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">     26</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>schema <span class="ansi-yellow-intense-fg ansi-bold">=</span> cd<span class="ansi-yellow-intense-fg ansi-bold">.</span>Schema<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>pixieapp_entity<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">50</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 27</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>schema<span class="ansi-yellow-intense-fg ansi-bold">.</span>load_and_process<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     28</span> 
+<span class="ansi-green-fg">     29</span>     <span class="ansi-yellow-intense-fg ansi-bold">@</span>route<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pixiedust_rosie\classify\classify_data.py</span> in <span class="ansi-cyan-fg">load_and_process</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">    154</span>     <span class="ansi-red-intense-fg ansi-bold">#</span>
+<span class="ansi-green-fg">    155</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> load_and_process<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 156</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>matcher <span class="ansi-yellow-intense-fg ansi-bold">=</span> rm<span class="ansi-yellow-intense-fg ansi-bold">.</span>Matcher<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    157</span>         ok<span class="ansi-yellow-intense-fg ansi-bold">,</span> err <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>load_sample_data<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    158</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> ok<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pixiedust_rosie\classify\rosie_matcher.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">     56</span>         rosie_home <span class="ansi-yellow-intense-fg ansi-bold">=</span> os<span class="ansi-yellow-intense-fg ansi-bold">.</span>getenv<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;ROSIE_HOME&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     57</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> rosie_home<span class="ansi-yellow-intense-fg ansi-bold">:</span> rosie<span class="ansi-yellow-intense-fg ansi-bold">.</span>load<span class="ansi-yellow-intense-fg ansi-bold">(</span>os<span class="ansi-yellow-intense-fg ansi-bold">.</span>path<span class="ansi-yellow-intense-fg ansi-bold">.</span>join<span class="ansi-yellow-intense-fg ansi-bold">(</span>rosie_home<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;src/librosie/local&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 58</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>engine <span class="ansi-yellow-intense-fg ansi-bold">=</span> rosie<span class="ansi-yellow-intense-fg ansi-bold">.</span>engine<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     59</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>engine<span class="ansi-yellow-intense-fg ansi-bold">.</span>import_pkg<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">b&#39;all&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     60</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>engine<span class="ansi-yellow-intense-fg ansi-bold">.</span>import_pkg<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">b&#39;csv&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\rosie\rosie.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">     67</span> 
+<span class="ansi-green-fg">     68</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> __init__<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 69</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_engine <span class="ansi-yellow-intense-fg ansi-bold">=</span> internal<span class="ansi-yellow-intense-fg ansi-bold">.</span>engine<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     70</span> 
+<span class="ansi-green-fg">     71</span>     <span class="ansi-red-intense-fg ansi-bold"># -----------------------------------------------------------------------------</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\rosie\internal.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">    192</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> __init__<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    193</span>         <span class="ansi-green-intense-fg ansi-bold">global</span> _lib
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 194</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> _lib<span class="ansi-yellow-intense-fg ansi-bold">:</span> load<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    195</span>         Cerrs <span class="ansi-yellow-intense-fg ansi-bold">=</span> _new_cstr<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    196</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>engine <span class="ansi-yellow-intense-fg ansi-bold">=</span> _lib<span class="ansi-yellow-intense-fg ansi-bold">.</span>rosie_new<span class="ansi-yellow-intense-fg ansi-bold">(</span>Cerrs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\rosie\internal.py</span> in <span class="ansi-cyan-fg">load</span><span class="ansi-blue-intense-fg ansi-bold">(path, quiet)</span>
+<span class="ansi-green-fg">    147</span>                 _load_from<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>     <span class="ansi-red-intense-fg ansi-bold"># system</span>
+<span class="ansi-green-fg">    148</span>             <span class="ansi-green-intense-fg ansi-bold">except</span> OSError<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 149</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span><span class="ansi-green-intense-fg ansi-bold">raise</span> RuntimeError<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;Cannot find librosie in local directory or system installation&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    150</span>     <span class="ansi-green-intense-fg ansi-bold">elif</span> path <span class="ansi-yellow-intense-fg ansi-bold">==</span> librosie_system<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    151</span>         <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-red-intense-fg ansi-bold">RuntimeError</span>: Cannot find librosie in local directory or system installation</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DON&#39;T TOUCH THE &#39;DRIVER&#39; ATTRIBUTE!</span>
+<span class="n">dsn</span> <span class="o">=</span> <span class="s2">&quot;DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-08.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=hbs51528;PWD=hl9zvb3t4sp0w6@r;&quot;</span>
+<span class="c1"># dsn = &quot;DRIVER={{IBM DB2 ODBC DRIVER}};&quot; + \</span>
+<span class="c1">#       &quot;DATABASE={BLUDB};&quot; + \</span>
+<span class="c1">#       &quot;HOSTNAME={dashdb-txn-sbox-yp-dal09-08.services.dal.bluemix.net};&quot; + \</span>
+<span class="c1">#       &quot;PORT=50000;&quot; + \</span>
+<span class="c1">#       &quot;PROTOCOL=TCPIP;&quot; + \</span>
+<span class="c1">#       &quot;UID={hbs51528};&quot; + \</span>
+<span class="c1">#       &quot;PWD={hl9zvb3t4sp0w6@r};&quot;</span>
+<span class="n">SCHEMA_NAME</span> <span class="o">=</span> <span class="s1">&#39;HBS51528&#39;</span>
+<span class="n">hdbc</span> <span class="o">=</span> <span class="n">ibm_db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dsn</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">hdbi</span> <span class="o">=</span> <span class="n">ibm_db_dbi</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="n">hdbc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connection To DB2 Instance Has Been Created!&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Query Strings</span>
+<span class="n">sql</span> <span class="o">=</span> <span class="s1">&#39;CREATE TABLE &#39;</span><span class="o">+</span><span class="n">SCHEMA_NAME</span><span class="o">+</span><span class="s1">&#39;.JHUCOVIDSUMMARY ( &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;ID SMALLINT NOT NULL GENERATED ALWAYS AS IDENTITY, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Global__NewConfirmed INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Global__TotalConfirmed INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Global__NewDeaths INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Global__TotalDeaths INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Global__NewRecovered INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Global__TotalRecovered INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__Country VARCHAR(255), &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__CountryCode VARCHAR(255), &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__Slug VARCHAR(255), &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__NewConfirmed INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__TotalConfirmed INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__NewDeaths INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__TotalDeaths INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__NewRecovered INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__TotalRecovered INTEGER, &#39;</span> <span class="o">+</span> \
+      <span class="s1">&#39;Countries__Date VARCHAR(255))&#39;</span>
+<span class="c1">#     var selectString = &quot;select * from covidsummary&quot;;</span>
+<span class="c1">#     var deleteString = &quot;drop table covidsummaryUPDATE&quot;;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="n">ibm_db</span><span class="o">.</span><span class="n">exec_immediate</span><span class="p">(</span><span class="n">hdbc</span><span class="p">,</span> <span class="n">sql</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Table JHUCOVIDSUMMARY Has Been Created Under &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">SCHEMA_NAME</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; Schema!&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ERROR: Table Already Exist Or Some Other Error&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sql2 = &#39;CREATE TABLE &#39;+SCHEMA_NAME+&#39;.JSONPO( &#39; + \</span>
+<span class="c1"># &#39;ID SMALLINT NOT NULL GENERATED ALWAYS AS IDENTITY)&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_create</span> <span class="o">=</span> <span class="s1">&#39;CREATE TABLE &#39;</span><span class="o">+</span><span class="n">SCHEMA_NAME</span><span class="o">+</span><span class="s1">&#39;.JSONPO( &#39;</span> <span class="o">+</span> \
+        <span class="s1">&#39;ID INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY, DATA BLOB(16M) INLINE LENGTH 25000, PRIMARY KEY(ID)) CCSID UNICODE;&#39;</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">stmt</span> <span class="o">=</span> <span class="n">ibm_db</span><span class="o">.</span><span class="n">exec_immediate</span><span class="p">(</span><span class="n">hdbc</span><span class="p">,</span> <span class="n">sql_create</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Table JSONPO Has Been Created Under &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">SCHEMA_NAME</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; Schema!&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ERROR: Table Already Exist Or Some Other Error&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using a switcher (or a dictionary to map cases to their functionality) for Python Switch Case Statement</span>
+<span class="k">def</span> <span class="nf">dict_key</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+        <span class="n">switcher</span><span class="o">=</span><span class="p">{</span>
+                <span class="s1">&#39;Global&#39;</span><span class="p">:</span><span class="s1">&#39;Global&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Countries&#39;</span><span class="p">:</span><span class="s1">&#39;Countries&#39;</span>
+             <span class="p">}</span>
+        <span class="k">return</span> <span class="n">switcher</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="s2">&quot;Not a valid key&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # Using Python Functions &amp; Lambdas in the dictionary (dict)</span>
+<span class="c1"># def Global():</span>
+<span class="c1">#         return &#39;Global&#39;</span>
+<span class="c1"># def Countries():</span>
+<span class="c1">#         return &#39;Countries&#39;</span>
+<span class="c1"># def indirect(key):</span>
+<span class="c1">#         switcher={</span>
+<span class="c1">#                 &#39;Global&#39;:Global,</span>
+<span class="c1">#                 &#39;Countries&#39;:Countries</span>
+<span class="c1">#                 }</span>
+<span class="c1">#         func=switcher.get(key,&#39;Not a valid key&#39;)</span>
+<span class="c1">#         return func()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Parse JSON (HAD TO USE API URL)</span>
+<span class="k">def</span> <span class="nf">jhu_search</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+<span class="c1">#         url = &#39;https://api.covid19api.com/summary#&#39;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://covid19.mathdro.id/api&#39;</span>
+        <span class="c1"># To execute get request</span>
+        <span class="n">response</span> <span class="o">=</span>  <span class="n">reqs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="c1"># Difference between urrlib &amp; request: https://stackoverflow.com/questions/38114499/difference-between-requests-get-and-urrlib-request-urlopen-python</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span> <span class="c1"># Raise error in case of failure</span>
+        <span class="n">jsonResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="c1"># To get response dictionary as JSON content             </span>
+        
+    <span class="k">except</span> <span class="n">HTTPError</span> <span class="k">as</span> <span class="n">http_err</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;HTTP error occurred: </span><span class="si">{</span><span class="n">http_err</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">connErr</span><span class="p">:</span> 
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Error Connecting:&quot;</span><span class="p">,</span> <span class="n">connErr</span><span class="p">)</span> 
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">Timeout</span> <span class="k">as</span> <span class="n">timeOutErr</span><span class="p">:</span> 
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Timeout Error:&quot;</span><span class="p">,</span> <span class="n">timeOutErr</span><span class="p">)</span> 
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">reqErr</span><span class="p">:</span> 
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Something Else:&quot;</span><span class="p">,</span> <span class="n">reqErr</span><span class="p">)</span> 
+    <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">exc</span><span class="o">.</span><span class="n">errno</span> <span class="o">==</span> <span class="mi">36</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;OSError: [Errno 36] File name too long: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span>  <span class="c1"># re-raise previously caught exception</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Other error occurred: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+               
+<span class="c1">#     return jsonResponse</span>
+
+<span class="c1"># # iterate all JSON key-value pairs one-by-one.</span>
+
+<span class="c1"># print(&#39;Your IP is {0}&#39;.format(response.json()[&#39;origin&#39;]))</span>
+
+    <span class="k">for</span> <span class="n">hlKey</span> <span class="ow">in</span> <span class="n">jsonResponse</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dict_key</span><span class="p">(</span><span class="n">hlKey</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Global&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A standard dictionary (dict) key: </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hlKey</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Other key: </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hlKey</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">jsonResponse</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Likely key with a list of multiple values in the dict : </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A standard dict key: </span><span class="si">{0}</span><span class="s1"> &amp; value: </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">))</span>
+        
+<span class="c1">#         for k, v in jsonResponse.items():</span>
+<span class="c1"># #             time.sleep(0.05)</span>
+<span class="c1">#             for k1, v1 in v.items():</span>
+<span class="c1">#                 print(k1)       </span>
+        
+<span class="c1"># https://www.dataquest.io/blog/python-json-tutorial/</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">jhu_search</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># try:</span>
+<span class="c1">#     #Parse JSON (HAD TO USE API URL)</span>
+<span class="c1"># #     url = &quot;https://api.covid19api.com/summary#&quot;</span>
+<span class="c1"># #     json_obj = requests.get(url)</span>
+<span class="c1"># #     data = json_obj.json()</span>
+<span class="c1">#         url = &#39;https://api.covid19api.com/summary#&#39;</span>
+<span class="c1">#         # To execute get request</span>
+<span class="c1">#         response =  reqs.get(url) # Difference between urrlib &amp; request: https://stackoverflow.com/questions/38114499/difference-between-requests-get-and-urrlib-request-urlopen-python</span>
+<span class="c1">#         response.raise_for_status() # Raise error in case of failure</span>
+<span class="c1">#         data = response.json() # To get response dictionary as JSON content</span>
+        
+<span class="c1">#         for i in jsonResponse:</span>
+<span class="c1">#             sql_inter = &#39;INSERT INTO &#39;+SCHEMA_NAME+&#39;.JSONPO VALUES (&#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewConfirmed&quot;: &quot;&#39;+str(data[i][&#39;Global&#39;][&#39;NewConfirmed&#39;])+&#39;&quot;} \&#39;) , &#39; # SYSTOOLS.JSON2BSON({\&#39;&#39;+data[i]+&#39;\&#39;}))&#39;</span>
+<span class="c1">#             stmt = ibm_db.exec_immediate(hdbc, sql_inter)</span>
+<span class="c1">#             print(&#39;Table JSONPO Has Been Created Under &#39; + str(SCHEMA_NAME) + &#39; Schema!&#39;)</span>
+<span class="c1"># except:</span>
+<span class="c1">#     print(&#39;ERROR: Table Already Exist Or Some Other Error&#39;)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # Global and Countries</span>
+<span class="c1"># # &#39;ID, &#39; + \</span>
+<span class="c1"># sql_p1 = &#39;INSERT INTO &#39;+SCHEMA_NAME+&#39;.JHUCOVIDSUMMARY (&#39; + \</span>
+<span class="c1">#             &#39;Global__NewConfirmed&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__TotalConfirmed&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__NewDeaths&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__TotalDeaths&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__NewRecovered&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__TotalRecovered&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__Country&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__CountryCode&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__Slug&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__NewConfirmed&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__TotalConfirmed&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__NewDeaths&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__TotalDeaths&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__NewRecovered&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__TotalRecovered&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__Date&#39; + &#39;)&#39;</span>
+
+<span class="c1"># #Parse JSON (HAD TO USE API URL)</span>
+<span class="c1"># def jhu_search():</span>
+<span class="c1">#     url = &quot;https://api.covid19api.com/summary#&quot;</span>
+<span class="c1">#     json_obj = requests.get(url)</span>
+<span class="c1">#     data = json_obj.json()          </span>
+<span class="c1"># #     return data</span>
+<span class="c1">#     sql_p2 = &#39;&#39;</span>
+<span class="c1">#     for gItem in data[&#39;Global&#39;]:</span>
+<span class="c1">#         for cItem in data[&#39;Countries&#39;]:</span>
+<span class="c1">#             sql_p2 += &#39; VALUES (&#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewConfirmed&quot;: &quot;&#39;+str(gItem[&#39;Global&#39;][&#39;NewConfirmed&#39;])+&#39;&quot;} \&#39;) , &#39; </span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalConfirmed&quot;: &quot;&#39;+str(gItem[&#39;Global&#39;][&#39;TotalConfirmed&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewDeaths&quot;: &quot;&#39;+str(gItem[&#39;Global&#39;][&#39;NewDeaths&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalDeaths&quot;: &quot;&#39;+str(gItem[&#39;Global&#39;][&#39;TotalDeaths&#39;])+&#39;&quot;} \&#39;) , &#39; </span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewRecovered&quot;: &quot;&#39;+str(gItemm[&#39;Global&#39;][&#39;NewRecovered&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalRecovered&quot;: &quot;&#39;+str(gItem[&#39;Global&#39;][&#39;TotalRecovered&#39;])+&#39;&quot;} \&#39;) , &#39; </span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Country&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;Country&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;CountryCode&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;CountryCode&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Slug&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;Slug&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewConfirmed&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;NewConfirmed&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalConfirmed&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;TotalConfirmed&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewDeaths&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;NewDeaths&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalDeaths&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;TotalDeaths&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewRecovered&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;NewRecovered&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalRecovered&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;TotalRecovered&#39;])+&#39;&quot;} \&#39;) , &#39;</span>
+<span class="c1">#             &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Date&quot;: &quot;&#39;+str(cItem[&#39;Countries&#39;][&#39;Date&#39;])+&#39;&quot;} \&#39;), &#39;</span>
+<span class="c1">#             &#39;)&#39;</span>
+            
+<span class="c1">#     sql_final  = sql_p1 + sql_p2</span>
+<span class="c1">#     stmt = ibm_db.exec_immediate(hdbc, sql_final)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Global and Countries</span>
+<span class="c1"># &#39;ID, &#39; + \</span>
+<span class="c1"># sql_p1 = &#39;INSERT INTO &#39;+SCHEMA_NAME+&#39;.JHUCOVIDSUMMARY (&#39; + \</span>
+<span class="c1">#             &#39;Global__NewConfirmed&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__TotalConfirmed&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__NewDeaths&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__TotalDeaths&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__NewRecovered&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Global__TotalRecovered&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__Country&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__CountryCode&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__Slug&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__NewConfirmed&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__TotalConfirmed&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__NewDeaths&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__TotalDeaths&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__NewRecovered&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__TotalRecovered&#39; + &#39;, &#39; + \</span>
+<span class="c1">#             &#39;Countries__Date&#39; + &#39;)&#39;</span>
+
+<span class="c1"># #Store Analyzed Data from JSON API URL</span>
+<span class="c1"># lam = data[&#39;Global&#39;][&#39;NewDeaths&#39;]</span>
+<span class="c1"># size = data[&#39;Global&#39;][&#39;TotalDeaths&#39;]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for v, k in data.items():</span>
+<span class="c1">#     if not isinstance(k, list):</span>
+<span class="c1">#         for x, y in k.items():</span>
+<span class="c1">#             print(x,&#39;:&#39;, y)</span>
+<span class="c1">#     else:</span>
+<span class="c1">#         for i in k:</span>
+<span class="c1">#             for s, m in i.items():</span>
+<span class="c1">#                 print(s,&#39;:&#39;, m)</span>
+
+<span class="c1"># for item in data:</span>
+<span class="c1"># sql_p2 = &#39; VALUES (&#39; + &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewConfirmed&quot;: &quot;&#39;+str(item[&#39;Global&#39;][&#39;NewConfirmed&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalConfirmed&quot;: &quot;&#39;+str(item[&#39;Global&#39;][&#39;TotalConfirmed&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewDeaths&quot;: &quot;&#39;+str(item[&#39;Global&#39;][&#39;NewDeaths&#39;])+&#39;&quot;} \&#39;), &#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalDeaths&quot;: &quot;&#39;+str(item[&#39;Global&#39;][&#39;TotalDeaths&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewRecovered&quot;: &quot;&#39;+str(item[&#39;Global&#39;][&#39;NewRecovered&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalRecovered&quot;: &quot;&#39;+str(item[&#39;Global&#39;][&#39;TotalRecovered&#39;])+&#39;&quot;} \&#39;),&#39; </span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Country&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;Country&#39;])+&#39;&quot;} \&#39;), &#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;CountryCode&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;CountryCode&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Slug&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;Slug&#39;])+&#39;&quot;} \&#39;), &#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewConfirmed&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;NewConfirmed&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalConfirmed&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;TotalConfirmed&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewDeaths&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;NewDeaths&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalDeaths&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;TotalDeaths&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewRecovered&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;NewRecovered&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalRecovered&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;TotalRecovered&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +        &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Date&quot;: &quot;&#39;+str(item[&#39;Countries&#39;][&#39;Date&#39;])+&#39;&quot;} \&#39;),&#39;</span>
+<span class="c1"># +&#39;)&#39;</span>
+
+<span class="c1"># sql_final  = sql_p1 + sql_p2</span>
+<span class="c1"># stmt = ibm_db.exec_immediate(hdbc, sql_final)</span>
+
+
+<span class="c1"># global_newConfirmed = row[&#39;Global&#39;][&#39;NewConfirmed&#39;]</span>
+<span class="c1"># global_totalConfirmed = row[&#39;Global&#39;][&#39;TotalConfirmed&#39;]</span>
+<span class="c1"># global_newDeaths = row[&#39;Global&#39;][&#39;NewDeaths&#39;]</span>
+<span class="c1"># global_totalDeaths = row[&#39;Global&#39;][&#39;TotalDeaths&#39;]</span>
+<span class="c1"># global_newRecovered = row[&#39;Global&#39;][&#39;NewRecovered&#39;]</span>
+<span class="c1"># global_totalRecovered = row[&#39;Global&#39;][&#39;TotalRecovered&#39;]</span>
+<span class="c1"># countries_country = row[&#39;Countries&#39;][&#39;Country&#39;]</span>
+<span class="c1"># countries_countryCode = row[&#39;Countries&#39;][&#39;CountryCode&#39;]</span>
+<span class="c1"># countries_slug = row[&#39;Countries&#39;][&#39;Slug&#39;]</span>
+<span class="c1"># countries_newConfirmed = row[&#39;Countries&#39;][&#39;NewConfirmed&#39;]</span>
+<span class="c1"># countries_totalConfirmed = row[&#39;Countries&#39;][&#39;TotalConfirmed&#39;]</span>
+<span class="c1"># countries_newDeaths = row[&#39;Countries&#39;][&#39;NewDeaths&#39;]</span>
+<span class="c1"># countries_totalDeaths = row[&#39;Countries&#39;][&#39;TotalDeaths&#39;]</span>
+<span class="c1"># countries_newRecovered = row[&#39;Countries&#39;][&#39;NewRecovered&#39;]</span>
+<span class="c1"># countries_totalRecovered = row[&#39;Countries&#39;][&#39;TotalRecovered&#39;]</span>
+<span class="c1"># countries_date = row[&#39;Countries&#39;][&#39;Date&#39;]</span>
+<span class="c1">#     for index, row in data.iterrows():</span>
+<span class="c1">#     sql_p2 = &#39; VALUES (&#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewConfirmed&quot;: &quot;&#39;+str(global_newConfirmed)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalConfirmed&quot;: &quot;&#39;+str(global_totalConfirmed)+&#39;&quot;} \&#39;) , &#39; + \ </span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewDeaths&quot;: &quot;&#39;+str(global_newDeaths)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalDeaths&quot;: &quot;&#39;+str(global_totalDeaths)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewRecovered&quot;: &quot;&#39;+str(global_totalConfirmed)+&#39;&quot;} \&#39;) , &#39; + \ </span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalRecovered&quot;: &quot;&#39;+str(global_totalConfirmed)+&#39;&quot;} \&#39;) , &#39; + \ </span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Country&quot;: &quot;&#39;+str(countries_country)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;CountryCode&quot;: &quot;&#39;+str(countries_countryCode)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Slug&quot;: &quot;&#39;+str(countries_slug)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewConfirmed&quot;: &quot;&#39;+str(countries_newConfirmed)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalConfirmed&quot;: &quot;&#39;+str(countries_totalConfirmed)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewDeaths&quot;: &quot;&#39;+str(countries_newDeaths)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalDeaths&quot;: &quot;&#39;+str(countries_totalDeaths)+&#39;&quot;} \&#39;) , &#39; + \ </span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;NewRecovered&quot;: &quot;&#39;+str(countries_newRecovered)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;TotalRecovered&quot;: &quot;&#39;+str(countries_totalRecovered)+&#39;&quot;} \&#39;) , &#39; + \</span>
+<span class="c1">#         &#39;SYSTOOLS.JSON2BSON(\&#39; {&quot;Date&quot;: &quot;&#39;+str(countries_date)+&#39; &#39; + \</span>
+<span class="c1">#     &#39;)&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data Loading </span>
+<span class="c1"># Johns Hopkins CSV interaction using JHU CSSE COVID-19 </span>
+<span class="c1"># Dataset Time series summary (csse_covid_19_time_series)</span>
+<span class="n">death_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&quot;</span><span class="p">)</span>
+<span class="n">confirmed_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv&quot;</span><span class="p">)</span>
+<span class="n">recovered_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv&quot;</span><span class="p">)</span>
+<span class="n">country_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/cssegisanddata/covid-19/web-data/data/cases_country.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data preparation</span>
+<span class="n">death_df</span><span class="o">.</span><span class="n">head</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data preparation</span>
+<span class="n">confirmed_df</span><span class="o">.</span><span class="n">head</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data preparation</span>
+<span class="n">recovered_df</span><span class="o">.</span><span class="n">head</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data preparation</span>
+<span class="n">country_df</span><span class="o">.</span><span class="n">head</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data cleaning - renaming</span>
+<span class="n">country_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">country_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">recovered_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">recovered_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">death_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">death_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">confirmed_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">confirmed_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data cleaning - renaming</span>
+<span class="n">confirmed_df</span> <span class="o">=</span> <span class="n">confirmed_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;province/state&#39;</span><span class="p">:</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="s1">&#39;country/region&#39;</span><span class="p">:</span> <span class="s1">&#39;country&#39;</span><span class="p">})</span>
+<span class="n">recovered_df</span> <span class="o">=</span> <span class="n">recovered_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;province/state&#39;</span><span class="p">:</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="s1">&#39;country/region&#39;</span><span class="p">:</span> <span class="s1">&#39;country&#39;</span><span class="p">})</span>
+<span class="n">death_df</span> <span class="o">=</span> <span class="n">death_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;province/state&#39;</span><span class="p">:</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="s1">&#39;country/region&#39;</span><span class="p">:</span> <span class="s1">&#39;country&#39;</span><span class="p">})</span>
+<span class="n">country_df</span> <span class="o">=</span> <span class="n">country_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;country_region&#39;</span><span class="p">:</span> <span class="s1">&#39;country&#39;</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data cleaning - renaming</span>
+<span class="c1"># @hidden_cell</span>
+<span class="n">sorted_country_df</span> <span class="o">=</span> <span class="n">country_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;confirmed&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">sorted_country_df</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;h1&gt;COVID-19 Confirmed/Death/Recovered cases by countries&lt;/h1&gt;&#39;</span>
+             <span class="s1">&#39;&lt;h2&gt;Enter number of countries you want the data for&lt;/h2&gt;&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data preparation</span>
+<span class="k">def</span> <span class="nf">highlight_col</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="s1">&#39;background-color: red&#39;</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="s1">&#39;background-color: purple&#39;</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="s1">&#39;background-color: grey&#39;</span>
+    <span class="n">temp_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    <span class="n">temp_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span>
+    <span class="n">temp_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span>
+    <span class="n">temp_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span>
+    <span class="k">return</span> <span class="n">temp_df</span>
+
+<span class="n">sorted_country_df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">highlight_col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;h1&gt;Slide to check for the worst hit countries&lt;/h1&gt;&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data preparation</span>
+<span class="c1"># x and y given as array_like objects</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">sorted_country_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;confirmed&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;confirmed&#39;</span><span class="p">,</span> 
+                  <span class="n">color</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">hover_name</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">size_max</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="c1"># fig.update_layout()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;h1&gt;Check the details of your country or the World&lt;/h1&gt;&#39;</span>
+<span class="s1">&#39;&lt;h4&gt;Enter the name of your country(in capitalized format(e.g. Italy)) and world for total cases&lt;/h4&gt;&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+
+<span class="k">def</span> <span class="nf">plot_cases_for_country</span><span class="p">(</span><span class="n">country</span><span class="p">):</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;confirmed&#39;</span><span class="p">,</span> <span class="s1">&#39;deaths&#39;</span><span class="p">]</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span>
+    <span class="n">mode_size</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+    <span class="n">line_size</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+    <span class="n">df_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">confirmed_df</span><span class="p">,</span> <span class="n">death_df</span><span class="p">]</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">df</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_list</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">country</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">or</span> <span class="n">country</span> <span class="o">==</span> <span class="s1">&#39;world&#39;</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">5</span><span class="p">:]</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">5</span><span class="p">:]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">5</span><span class="p">:]</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">5</span><span class="p">:]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_data</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_data</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines+markers&#39;</span><span class="p">,</span>
+                                    <span class="n">name</span><span class="o">=</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                    <span class="n">line</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="n">line_size</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+                                    <span class="n">connectgaps</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Total &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                                <span class="p">))</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        
+<span class="c1"># plot_cases_for_country(&#39;China&#39;)</span>
+
+<span class="n">interact</span><span class="p">(</span><span class="n">plot_cases_for_country</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s1">&#39;World&#39;</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;h1&gt;Global spread of COVID-19&lt;/h1&gt;&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="n">world_map</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mi">11</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">tiles</span><span class="o">=</span><span class="s2">&quot;cartodbpositron&quot;</span><span class="p">,</span> 
+                       <span class="n">zoom_start</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_zoom</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">min_zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">confirmed_df</span><span class="p">)):</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span>
+    <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">confirmed_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">confirmed_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;long&#39;</span><span class="p">]],</span>
+              <span class="n">fill</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="n">radius</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">confirmed_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mf">1.0001</span><span class="p">)))</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">)</span><span class="o">*</span><span class="mi">50000</span><span class="p">,</span>
+              <span class="n">fill_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+              <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
+              <span class="n">tooltip</span> <span class="o">=</span> <span class="s2">&quot;&lt;div style=&#39;margin: 0; background-color: black; color: white;&#39;&gt;&quot;</span><span class="o">+</span>
+                            <span class="s2">&quot;&lt;h4 style=&#39;text-align:center;font-weight:bold&#39;&gt;&quot;</span><span class="o">+</span><span class="n">confirmed_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">+</span><span class="s2">&quot;&lt;/h4&gt;&quot;</span><span class="o">+</span>
+                            <span class="s2">&quot;&lt;hr style=&#39;margin:10px;color:white;&#39;&gt;&quot;</span><span class="o">+</span>
+                            <span class="s2">&quot;&lt;ul style=&#39;color:white;list-style-type:circle;align-item:left;padding-left:20px;padding-right:20px&#39;&gt;&quot;</span><span class="o">+</span>
+                            <span class="s2">&quot;&lt;li&gt;Confirmed: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">confirmed_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;&lt;/li&gt;&quot;</span><span class="o">+</span>
+                            <span class="s2">&quot;&lt;li&gt;Deaths: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">death_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;&lt;/li&gt;&quot;</span><span class="o">+</span>
+                            <span class="s2">&quot;&lt;li&gt;Death Rate: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">death_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="n">confirmed_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mf">1.00001</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span> <span class="s2">&quot;&lt;/li&gt;&quot;</span><span class="o">+</span>
+                        <span class="s2">&quot;&lt;/ul&gt;&lt;/div&gt;&quot;</span><span class="p">,</span>
+              <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">world_map</span><span class="p">)</span>
+              
+<span class="n">world_map</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;h2&gt;More Info on COVID-19:&lt;a href=&quot;#More-Info-on-COVID-19:&quot;&gt;&lt;/h2&gt;&#39;</span>
+<span class="s1">&#39;&lt;ul&gt;&#39;</span>
+             <span class="s1">&#39;&lt;li&gt;&lt;a href=&quot;https://www.who.int/health-topics/coronavirus&quot;&gt;https://www.who.int/health-topics/coronavirus&lt;/a&gt;&lt;/li&gt;&#39;</span>
+             <span class="s1">&#39;&lt;li&gt;&lt;a href=&quot;https://www.who.int/emergencies/diseases/novel-coronavirus-2019&quot;&gt;https://www.who.int/emergencies/diseases/novel-coronavirus-2019&lt;/a&gt;&lt;/li&gt;&#39;</span>
+             <span class="s1">&#39;&lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/s41597-020-0448-0&quot;&gt;https://www.nature.com/articles/s41597-020-0448-0&lt;/a&gt;&lt;/li&gt;&#39;</span>
+<span class="s1">&#39;&lt;/ul&gt;&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import nbinteract as nbi</span>
+<span class="c1"># nbi.publish(&#39;kenaitian/voila/master&#39;, &#39;DataVisualization.ipynb&#39;);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="nd">@interact</span>
+<span class="k">def</span> <span class="nf">polynomial</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">([</span><span class="n">split</span><span class="o">/</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="o">-</span><span class="n">split</span><span class="o">/</span><span class="mf">100.0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First make sure that weaviate is running before you create schema</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">weaviate</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;http://localhost:8080&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_schema</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/semi-technologies/weaviate-python-client/master/documentation/getting_started/people_schema.json&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create Things or Actions</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_thing</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John von Neumann&quot;</span><span class="p">},</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span> <span class="s2">&quot;b36268d4-a6b5-5274-985f-45f13ce0c642&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_thing</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alan Turing&quot;</span><span class="p">},</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span> <span class="s2">&quot;1c9cd584-88fe-5010-83d0-017cb3fcb446&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_thing</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Legends&quot;</span><span class="p">},</span> <span class="s2">&quot;Group&quot;</span><span class="p">,</span> <span class="s2">&quot;2db436b5-0557-5016-9c5f-531412adf9c6&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;2db436b5-0557-5016-9c5f-531412adf9c6&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Actions can be created in a similar fashion like this:</span>
+<span class="c1"># client.create_action({&quot;description&quot;: &quot;John von Neumann&#39;s book&quot;}, &quot;Buy&quot;)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can add cross-references through:</span>
+<span class="n">client</span><span class="o">.</span><span class="n">add_reference_to_thing</span><span class="p">(</span><span class="s2">&quot;2db436b5-0557-5016-9c5f-531412adf9c6&quot;</span><span class="p">,</span> <span class="s2">&quot;members&quot;</span><span class="p">,</span> <span class="s2">&quot;b36268d4-a6b5-5274-985f-45f13ce0c642&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">add_reference_to_thing</span><span class="p">(</span><span class="s2">&quot;2db436b5-0557-5016-9c5f-531412adf9c6&quot;</span><span class="p">,</span> <span class="s2">&quot;members&quot;</span><span class="p">,</span> <span class="s2">&quot;1c9cd584-88fe-5010-83d0-017cb3fcb446&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">create_thing</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jesse James Gardner&quot;</span><span class="p">},</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span> <span class="s2">&quot;a36268d4-a6b5-5274-985f-45f13ce0c642&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;a36268d4-a6b5-5274-985f-45f13ce0c642&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+
+
+<!-- Loads nbinteract package -->
+<script src="https://unpkg.com/nbinteract-core" async></script>
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+
+    var interact = new window.NbInteract({
+      spec: 'kenaitian/fe709743d98380a6bbc65a2b18267892/master',
+      baseUrl: 'https://mybinder.org',
+      provider: 'gh',
+    })
+    interact.prepare()
+
+    window.interact = interact
+  })()
+</script>
+    </div>
+  </div>
+</body>
